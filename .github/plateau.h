@@ -15,6 +15,7 @@ public:
     void placerMur(int x, int y, std::string orientation);
     void placerRobot(Robot robot); // Place un robot
     void afficherPlateau(); // Affiche le plateau
+
 };
 
 #endif
