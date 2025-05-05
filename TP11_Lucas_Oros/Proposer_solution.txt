@@ -1,0 +1,51 @@
+//boucle while pour deplacement des robots avec haut, bas, gauche, droite et fin
+while (true) {
+    cout << "\nEntrez la couleur du robot a deplacer (rouge, vert, bleu, jaune) ou 'fin' pour terminer : " << endl;
+    string couleurInput;
+    getline(cin, couleurInput);
+
+    // Convertir la chaine de caractères couleurInput en TypeCouleur
+    TypeCouleur couleurRobot;
+    if (couleurInput == "rouge") {
+        couleurRobot = ROUGE;
+    } else if (couleurInput == "vert") {
+        couleurRobot = VERT;
+    } else if (couleurInput == "bleu") {
+        couleurRobot = BLEU;
+    } else if (couleurInput == "jaune") {
+        couleurRobot = JAUNE;
+    } else {
+        cout << "Couleur invalide" << endl;
+        continue; // Passer à l'itération suivante de la boucle
+    }
+
+    if (couleurInput == "fin") break;
+
+    cout << "Entrez la direction (haut, bas, gauche, droite) du robot " << couleurInput << " : " << endl;
+    string directionInput;
+    getline(cin, directionInput);
+
+
+    robots[couleurRobot].deplacement(directionInput, robotPtrs);
+    cout << "Robot " << couleurInput << " : (" << robots[couleurRobot].getX() << ", " << robots[couleurRobot].getY() << ")" << endl;
+
+
+    //affichage de la grille a la fin de chaque déplacement ici
+}
+
+//nombre de deplacements effectues par les 4 robots
+for(size_t i = 0; i < robots.size(); ++i) {
+    std::cout << "Robot " << i+1 << " : " 
+                << robots[i].getNombreDeDeplacements() 
+                << " deplacements" << std::endl;
+}
+
+//nombre de deplacements total
+int total_deplacements = 0;
+for(size_t i = 0; i < robots.size(); ++i) {
+    total_deplacements += robots[i].getNombreDeDeplacements();
+}
+cout << "Nombre total de deplacements : " << total_deplacements << endl;
+
+//objectif_courantX = robots[getCouleur()].getX();
+//objectif_courantY = robots[getCouleur()].getY();
