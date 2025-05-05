@@ -15,14 +15,16 @@ typedef enum
     ROUGE = 0,
     VERT = 1,
     BLEU = 2,
-    JAUNE = 3
+    JAUNE = 3,
+    MULTICOULEUR = 4
 }TypeCouleur;
 
 typedef enum
 {
     LOSANGE = 0,
     CARRE = 1,
-    ETOILE = 2
+    ETOILE = 2,
+    ROND = 3
 }TypeSymbole;
 
 class Tuile_objectif
@@ -35,7 +37,7 @@ private:
 
 public:
     Tuile_objectif(/* args */);
-    ~Tuile_objectif();
+    Tuile_objectif(int _positionX, int _positionY, TypeCouleur _couleur, TypeSymbole);
     
     // Setters
     void setPosition(int _positionX, int _positionY);

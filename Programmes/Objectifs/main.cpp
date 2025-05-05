@@ -1,7 +1,11 @@
+#include <iostream>
+#include <vector>
 #include "Tuile_objectif.h"
 
-int main()
-{
-    Tuile_objectif latuile();
+using namespace std;
+int main() {
+    vector<Tuile_objectif> Lestuiles;
+    pair<int, int> angles;
+    
     return 0;
 }

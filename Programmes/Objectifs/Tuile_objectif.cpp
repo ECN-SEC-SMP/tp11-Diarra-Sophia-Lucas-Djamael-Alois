@@ -14,6 +14,23 @@ Tuile_objectif::Tuile_objectif(/* args */)
 }
 
 /**
+ * @brief Constructeur de la classe Tuile_objectif.
+ * 
+ * @param _positionX Position en X à affecter.
+ * @param _positionY Position en Y à affecter.
+ * @param _couleur   Couleur à affecter.
+ * @param __symbole  Symbole à affecter.
+ */
+Tuile_objectif::Tuile_objectif(int _positionX, int _positionY, TypeCouleur _couleur, TypeSymbole _symbole)
+{
+    this->positionX = _positionX % MAX_POSITION_X;
+    this->positionY = _positionY % MAX_POSITION_Y;
+    this->couleur = (TypeCouleur)(_couleur % NB_COULEURS_DIFFS);
+    this->symbole = (TypeSymbole)(_symbole % NB_SYMBOLES_DIFFS);
+}
+
+
+/**
  * @brief Définit la position de la tuile.
  * 
  * @param _positionX Position en X à affecter.
