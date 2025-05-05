@@ -71,7 +71,7 @@ bool Robot::positionOccupee(int nx, int ny, const vector<Robot*> &robots){
 //deplacement du robot sur le plateau (haut, bas, gauche, droite) jusqu'a la limite du plateau 16x16
 void Robot::deplacement(string direction, const vector<Robot*> &robots){
     if (direction == "haut"){
-        while (y > 0){  // Tant que le robot n'est pas déjà en haut du plateau
+        while (y < 15){  // Tant que le robot n'est pas déjà en haut du plateau
             y++;        // Déplacer le robot vers le haut
             if (positionOccupee(this->x, this->y, robots)) { // Si la position est occupée par un autre robot
                 y--; // Reculer d'une case
@@ -80,7 +80,7 @@ void Robot::deplacement(string direction, const vector<Robot*> &robots){
         }
     nombre_de_deplacements++;
     }else if (direction == "bas"){
-        while (y < 15){  // Tant que le robot n'est pas déjà en bas du plateau
+        while (y > 0){  // Tant que le robot n'est pas déjà en bas du plateau
             y--;         // Déplacer le robot vers le bas
             if (positionOccupee(this->x, this->y, robots)) { // Si la position est occupée par un autre robot
                 y++; // Reculer d'une case
@@ -90,18 +90,18 @@ void Robot::deplacement(string direction, const vector<Robot*> &robots){
     nombre_de_deplacements++;  // Ajouter un déplacement
     }else if (direction == "gauche"){
         while (x > 0){  // Tant que le robot n'est pas déjà à gauche du plateau
-            x++;        // Déplacer le robot vers la gauche
+            x--;        // Déplacer le robot vers la gauche
             if (positionOccupee(this->x, this->y, robots)) { // Si la position est occupée par un autre robot
-                x--; // Reculer d'une case
+                x++; // Reculer d'une case
                 break; // Sortir de la boucle
             }
         }
     nombre_de_deplacements++;  // Ajouter un déplacement
     }else if (direction == "droite"){
         while (x < 15){  // Tant que le robot n'est pas déjà à droite du plateau
-            x--;         // Déplacer le robot vers la droite
+            x++;         // Déplacer le robot vers la droite
             if (positionOccupee(this->x, this->y, robots)) { // Si la position est occupée par un autre robot
-                x++; // Reculer d'une case
+                x--; // Reculer d'une case
                 break; // Sortir de la boucle
             }
         }
