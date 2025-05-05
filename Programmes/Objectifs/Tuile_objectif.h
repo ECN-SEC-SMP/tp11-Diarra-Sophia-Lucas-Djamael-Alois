@@ -6,8 +6,8 @@
 
 #define MAX_POSITION_X 16
 #define MAX_POSITION_Y 16
-#define NB_COULEURS_DIFFS 4
-#define NB_SYMBOLES_DIFFS 3
+#define NB_COULEURS_DIFFS 5
+#define NB_SYMBOLES_DIFFS 4
 using namespace std;
 
 typedef enum
@@ -16,7 +16,7 @@ typedef enum
     VERT = 1,
     BLEU = 2,
     JAUNE = 3,
-    MULTICOULEUR = 4
+    MULTICOLORE = 4
 }TypeCouleur;
 
 typedef enum
