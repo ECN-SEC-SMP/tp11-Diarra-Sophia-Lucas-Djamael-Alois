@@ -9,7 +9,7 @@
 
 using namespace std;
 
-typedef enum TypeCouleur {ROUGE, VERT, BLEU, JAUNE}; //permet de definir les 4 couleurs possibles
+enum TypeCouleur {ROUGE, VERT, BLEU, JAUNE}; //permet de definir les 4 couleurs possibles
 
 /**
  * @brief Classe Robot
