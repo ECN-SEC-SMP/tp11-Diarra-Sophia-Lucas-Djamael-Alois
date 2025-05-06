@@ -1,1 +1,0 @@
-Dans Joueur, l'attribut Nombre_de_mouvement est inutile
