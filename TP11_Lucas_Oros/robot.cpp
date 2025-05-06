@@ -110,3 +110,40 @@ void Robot::deplacement(string direction, const vector<Robot*> &robots){
         cout << "Direction non valide" << endl; // Message d'erreur si la direction n'est pas valide
     }
 }
+
+// Fonction pour vérifier si une position est libre pour eviter le chevauchement
+bool estPositionLibre(int x, int y, const std::vector<Robot>& robots) {
+    for (const auto& robot : robots) {
+        if (robot.getX() == x && robot.getY() == y)
+            return false; // Position occupée
+    }
+    return true; // Position libre
+}
+
+
+//fonction pour creer quatre robots de couleurs differents avec des positions aleatoires (ils ne doivent pas se chevaucher)
+vector<Robot> creationRobots() {
+    srand(time(0)); // Initialisation du générateur aléatoire
+
+    vector<Robot> robots;
+
+    for (int i = 0; i < 4; ++i) {
+        int x, y;
+        do {
+            x = rand() % 16;
+            y = rand() % 16;
+        } while (!estPositionLibre(x, y, robots)); // Vérifie la position dans le vecteur déjà créé
+
+        robots.push_back(Robot(x, y, static_cast<TypeCouleur>(i))); // Crée un robot avec une couleur différente
+    }
+
+    return robots; // Retourne la liste créée
+}
+
+vector<Robot*> getPointers(vector<Robot>& robots) {
+    vector<Robot*> ptrs;
+    for (Robot& r : robots) {
+        ptrs.push_back(&r); 
+    }
+    return ptrs;
+}

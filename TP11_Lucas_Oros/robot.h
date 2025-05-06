@@ -74,3 +74,8 @@ public:
     //deplacement
     void deplacement(string direction, const vector<Robot*> &robots); //deplace le robot sur le plateau (haut, bas, gauche, droite) jusqu'à obstacle
 };
+
+//prototype des fonctions
+bool estPositionLibre(int x, int y, const std::vector<Robot>& robots); //verifie si une position est libre pour eviter le chevauchement
+vector<Robot> creationRobots(); //creer quatre robots de couleurs differents avec des positions aleatoires (ils ne doivent pas se chevaucher)
+vector<Robot*> getPointers(vector<Robot>& robots); //obtenir les pointeurs vers les robots
