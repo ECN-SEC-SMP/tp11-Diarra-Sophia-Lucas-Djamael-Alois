@@ -30,7 +30,7 @@ int main(){
 
     // === Étape 0 : Initialisation du plateau de jeu ===
     cout << "=== Initialisation de l'ensemble du jeu ===" << endl;
-    Jeu game(); // Crée un objet de la classe Jeu avec le constructeur par défaut qui initialise tout le jeu
+    Jeu game; // Crée un objet de la classe Jeu avec le constructeur par défaut qui initialise tout le jeu
 
 
     //boucle while pour lancer une manche
@@ -38,7 +38,7 @@ int main(){
 
         // === Étape 1 : Tirage de la tuile objectif === 
         cout << "=== Tirage de la tuile objectif ===" << endl;
-        game.tirerTuileObjectif(); // Tire une tuile objectif et l'affiche
+        game.tirer_tuile_objectif(); // Tire une tuile objectif et l'affiche
 
         // === Étape 2 : Attente de la confirmation du joueur ===
         string input_ok;
@@ -52,7 +52,7 @@ int main(){
 
         // === Étape 3 : Lancer le sablier ===
         cout << "Lancement du sablier, il reste 60 secondes..." << endl;
-        game.annoncerSolution(); // active le sablier de 60 secondes
+        game.annoncer_Solution(); // active le sablier de 60 secondes
 
         // === Étape 4 & 5 : Proposition et validation de la solution ===
         bool solutionValide = false;
@@ -60,18 +60,19 @@ int main(){
 
             // === Étape 4 : Proposition de la solution ===
             cout << "\n=== Proposition de la solution par le joueur ===" << endl;
-            cout << "Entrez le nom du joueur qui propose la solution : ";
-            string nomJoueurProposition;
-            getline(cin, nomJoueurProposition);
-            game.propositionSolution(nomJoueurProposition);
+            game.proposer_Solution();
 
             // === Étape 5 : Validation de la solution ===
+            cout << "Entrez le nom du joueur qui a proposé la solution : " << endl;
+            string nomJoueurProposition;
+            getline(cin, nomJoueurProposition);
+            cout << "Nom du joueur : " << nomJoueurProposition << endl;
+
             cout << "\n=== Validation de la solution en cours ===" << endl;
-            if (game.validationSolution() == true) {
+            if (game.valider_solution(nomJoueurProposition) == true) {
                 cout << "Solution valide. Fin de la manche." << endl;
                 solutionValide = true;
             } else {
-                cout << "Solution invalide. Le joueur perd 1 point." << endl;
                 cout << "Un autre joueur peut maintenant proposer une nouvelle solution." << endl;
                 // Retourne à l'étape 4 automatiquement
             }
@@ -80,5 +81,16 @@ int main(){
         //attente de 5 secondes avant de recommencer une nouvelle manche
         cout << "Attendez 5 secondes avant de recommencer une nouvelle manche..." << endl;
         sleep(5); // Pause de 5 secondes
+
+        cout << "=== Continuer la partie : OUI / NON ===" << endl;
+        string continuerPartie;
+        getline(cin, continuerPartie);
+        if (continuerPartie == "NON") {
+            cout << "Fin de la partie." << endl;
+            break; // Sort de la boucle while pour terminer le jeu
+        } else if (continuerPartie != "OUI") {
+            cout << "Entrée invalide, la partie continue." << endl;
+        }
+
     }
 }

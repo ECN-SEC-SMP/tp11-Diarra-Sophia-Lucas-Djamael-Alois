@@ -317,9 +317,6 @@ void Jeu::proposer_Solution()
     }
     cout << "Nombre total de deplacements : " << total_deplacements << endl;
 
-    // objectif_courantX = robots[couleurRobot].getX();
-    // objectif_courantY = robots[couleurRobot].getY();
-    // objectif_courant.Set_position(objectif_courantX, objectif_courantY);
 };
 
 // verifier si la position de la tuile objectif actuel est celle de la case objectif
@@ -353,6 +350,13 @@ bool Jeu::valider_solution(string NomJoueur)
         cout<<"Proposition valide : "<<endl;
         cout<<joueur_courant->getNom()<<" vient de gagner 1 point !"<<endl;
         cout<<"Son score passe à "<< joueur_courant->getScore()<<endl;
+
+        // Affichage des scores des joueurs
+        cout << "\nil y a " << joueurs.size() << " joueurs dans la partie" << endl;
+        cout << "\n=== Recapitulatif des scores des joueurs ===" << endl;
+        for (size_t i = 0; i < joueurs.size(); ++i) {
+            cout << "Joueur " << i + 1 << " : " << joueurs[i].getNom() << " - Score : " << joueurs[i].getScore() << endl;
+        }
         return true;
     }
 }
