@@ -26,7 +26,8 @@ Pour la partie technique, la principale difficulté à laquelle nous nous sommes
 
 ## Résultats obtenus
 Nous avons procédé à des tests des différentes méthodes implémentées dans chaque classe. Les résultas obtenus sont satisfaisants.
-    ###Exemple de test de la classe Robot
+
+    ### Exemple de test de la classe Robot
 
     ### Exemple de test de la classe Plateau
 
