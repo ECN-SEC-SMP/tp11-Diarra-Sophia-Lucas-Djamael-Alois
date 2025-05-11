@@ -4,6 +4,8 @@ Ce projet s'inscrit dans le cadre du module de **spécification et modélisation
 ## Organisation du travail
 Nous sommes cinq personnes à avoir réalisé ce projet: Alois, Diarra, Djamael, Lucas et Sophia. Nous nous sommes répartis le travail en fonction des choix de conception que nous avons fait. La répartition des taches sera mentionnée dans la prochaine partie.
 A travers ce projet, nous avons mobilisé plusieurs outils: des outils de versionning comme **GIT**, **GITHUB**, des outils de conception comme **l'UML**, des outils de travail collaboratif comme **EXCALIDRAW**. Le langage utilisé pour l'implémentatio est le **C++**.
+![image](https://github.com/user-attachments/assets/7890722a-241e-4a4a-a4a1-3aeaf8abc6cd)
+
 ## Choix de conception
 La première étape est la conception du jeu en lui-meme. Pour cela, nous avons commencé par faire un travail collaboratif consistant à réaliser le diagramme des cas d'utilisation afin de cerner les différentes fonctionnalités du jeu, les acteurs et de définir les limites du système. Ci-dessous le diagramme des use case réalisé.
 ![image](https://github.com/user-attachments/assets/97647664-0b65-418f-91c1-23e8b72ea4f6)
