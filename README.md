@@ -47,3 +47,14 @@ Nous avons procédé à des tests des différentes méthodes implémentées dans
 A l'issu de ce projet, nous avons eu l'occasion de mettre en pratique différents concept de l'approche **classe & objet**, notamment la définition des classes ainsi que les relations entre elles: **délégation( agréagtion, composition) ou héritage**, l'usage des méthodes constantes et des références pour optimiser notre code, ...Nous avons également utilsé des bibliothèques particulières comme **vector** pour définir la meilleure structure pour nos données ou encore **ctime** pour l'usage de fonctions particulières comme rand(). 
 Au delà, cela a permis également de réaliser la conception en amont de l'implémentation et donc d'adopter les bonnes pratiques.
 
+
+## Remarque importante
+Suite à une erreur lors d’un `git push --force`, l’historique de la branche `main` a été accidentellement écrasé. 
+
+Pour conserver une trace fidèle du travail collectif effectué tout au long du projet, nous avons restauré l’ancien historique des commits dans une branche dédiée :
+[Branche restauration-historique](https://github.com/ECN-SEC-SMP/tp11-Diarra-Sophia-Lucas-Djamael-Alois/tree/restauration-historique)
+
+Elle contient l’ensemble des contributions individuelles (60+ commits), avec les auteurs d’origine.  
+Merci de bien vouloir en tenir compte dans l’évaluation.
+
+
