@@ -56,7 +56,7 @@ Suite à une erreur lors d’un `git push --force`, l’historique de la branche
 Pour conserver une trace fidèle du travail collectif effectué tout au long du projet, nous avons restauré l’ancien historique des commits dans une branche dédiée :
 [Branche restauration-historique](https://github.com/ECN-SEC-SMP/tp11-Diarra-Sophia-Lucas-Djamael-Alois/tree/restauration-historique)
 
-Elle contient une partie des contributions individuelles, avec les auteurs d’origine.  
+Elle contient une partie restaurée des contributions individuelles , qui restent consultables sur les branches de chacun.
 Merci de bien vouloir en tenir compte dans l’évaluation.
 
 
