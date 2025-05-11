@@ -4,7 +4,6 @@ Ce projet s'inscrit dans le cadre du module de **spécification et modélisation
 ## Organisation du travail
 Nous sommes cinq personnes à avoir réalisé ce projet: Alois, Diarra, Djamael, Lucas et Sophia. Nous nous sommes répartis le travail en fonction des choix de conception que nous avons fait. La répartition des taches sera mentionnée dans la prochaine partie.
 A travers ce projet, nous avons mobilisé plusieurs outils: des outils de versionning comme **GIT**, **GITHUB**, des outils de conception comme **l'UML**, des outils de travail collaboratif comme **EXCALIDRAW**. Le langage utilisé pour l'implémentatio est le **C++**.
-![image](https://github.com/user-attachments/assets/7890722a-241e-4a4a-a4a1-3aeaf8abc6cd)
 
 ## Choix de conception
 La première étape est la conception du jeu en lui-meme. Pour cela, nous avons commencé par faire un travail collaboratif consistant à réaliser le diagramme des cas d'utilisation afin de cerner les différentes fonctionnalités du jeu, les acteurs et de définir les limites du système. Ci-dessous le diagramme des use case réalisé.
@@ -24,7 +23,8 @@ Ces deux premières étapes nous ont permis de procéder à l'organisation des t
  ### Difficultés rencontrées
 Globalement, le projet s'est bien déroulé, il n'y a pas eu de difficulté particuliere pour la gestion du travail du groupe. Néanmoins, il a fallu avoir du recul pour s'assurer que tous avaient la meme compréhension du travail à effectuer.
 Pour la partie technique, la principale difficulté à laquelle nous nous sommes confrontés était l'usage de l'outil *GIT* car tout le monde ne l'utilisait pas d'habitude. Nous avons réussi à appréhender l'outil et à faire le versionning de notre code en nous entr'aidant et en faisant des recherches sur les bonnes pratiques à avoir. Nous avons également rencontré des conflits sur nos branches que nous sommes arrivés à gérer en procédant à une analyse méticuleuse du code.
-
+![image](https://github.com/user-attachments/assets/7890722a-241e-4a4a-a4a1-3aeaf8abc6cd)
+Comme on peut voir sur le diagramme ce n'est pas parfait, mais ça nous a permis d'en apprendre plus sur l'outil Git pour le versionning de code. 
 
 ## Résultats obtenus
 Nous avons procédé à des tests des différentes méthodes implémentées dans chaque classe. Les résultas obtenus sont satisfaisants.
