@@ -15,6 +15,8 @@ Ces deux premières étapes nous ont permis de procéder à l'organisation des t
 | Classe     | Jeu       | Plateau | Robot | Tuile obejctif | Sablier |
 |------------|-----------| ------- | ----- | -------------- | --------|
 | Responsable| Diarra    | Sophia  | Lucas | Djamael        | Alois   |
+Pour faire le versionning du code, nous avons choisi de separer le projet en plusieurs branches: une branche principale sur laquelle on push la bonne version du code et plusieurs branches secondaires pour chacune des classes.
+La méthode consistera à implementer chacune des classes  tout en prenant en compte le referentiel defini en amont pour facilter les tests. En effet, travailler directement sur la branche principale rendrait les tests impossibles et l'usage de Git n'aurait pas de sens.
 
 ## Déroulement du projet
  ### Planning
