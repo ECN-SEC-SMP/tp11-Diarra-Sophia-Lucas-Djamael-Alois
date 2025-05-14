@@ -185,7 +185,7 @@ void Jeu::proposer_Solution()
         robots[couleurRobot].deplacement(directionInput, robotPtrs, &le_plateau);
         cout << "Robot " << couleurInput << " : (" << robots[couleurRobot].getX() << ", " << robots[couleurRobot].getY() << ")" << endl;
 
-        // le_plateau.majPlateau(getPointers(robots));
+        le_plateau.majPlateau(getPointers(robots));
         le_plateau.afficherPlateau();
     }
 
