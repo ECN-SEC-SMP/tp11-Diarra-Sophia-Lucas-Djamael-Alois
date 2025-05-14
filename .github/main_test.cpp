@@ -1,7 +1,7 @@
 #include <iostream>
 #include "plateau.h"
 // #include "robot.h"
-#include "robot.h"
+#include "robot_test.h"
 
 
 int main() {
