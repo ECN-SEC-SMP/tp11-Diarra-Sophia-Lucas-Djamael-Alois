@@ -1,4 +1,8 @@
-// Created by  on 2025/04/29
+/**
+ * @file Jeu.h
+ * @brief Déclaration de la classe Jeu, qui gère la logique principale du jeu.
+ */
+
 #include "plateau.h"
 #include "robot.h"
 #include "sablier.h"
@@ -8,7 +12,13 @@
 #ifndef JEU_H
 #define JEU_H
 
-class Jeu {
+/**
+ * @class Jeu
+ * @brief Classe représentant l'ensemble du jeu : le plateau, les joueurs, les robots et les objectifs.
+ */
+
+class Jeu
+{
 private:
     Plateau le_plateau;
     vector<Robot> robots;
@@ -20,32 +30,50 @@ private:
     vector<Tuile_objectif> liste_tuiles_objectifs;
 
 public:
-//Constructeurs
+    /**
+     * @brief Constructeur par défaut de la classe Jeu.
+     */
+    Jeu();
 
-Jeu();
+    /**
+     * @brief Initialise la liste des joueurs.
+     *
+     * Demande à l'utilisateur de renseigner les informations nécessaires.
+     */
+    void set_Joueurs();
 
-//méthodes
-void set_Joueurs();
+    /**
+     * @brief Permet à un joueur d'annoncer une solution.
+     *
+     * Cette fonction est appelée lorsqu'un joueur pense avoir trouvé une solution.
+     */
+    void annoncer_Solution();
 
-void annoncer_Solution();
+    /**
+     * @brief Permet au joueur ayant annoncé la solution de la proposer en détail.
+     *
+     * Cette fonction est utilisée pour vérifier si le joueur avait raison.
+     */
+    void proposer_Solution();
 
-void proposer_Solution();
+    /**
+     * @brief Tire une nouvelle tuile objectif aléatoire.
+     *
+     * Cette tuile devient la nouvelle cible des joueurs.
+     */
+    void tirer_tuile_objectif();
 
-//disposer les differents tokens et afficher le plateau
-void initialiser_Jeu();
+    /**
+     * @brief Valide si un joueur a bien trouvé la bonne solution.
+     *
+     * @param NomJoueur Nom du joueur qui propose la solution.
+     * @return true si la solution est correcte, false sinon.
+     */
+    bool valider_solution(string NomJoueur);
 
-
-//generation d'une tuile objectif aleatoire
-void tirer_tuile_objectif();
-
-//comparer la solution du joueur actuel avec celle des autres joueurs
-bool valider_solution(string NomJoueur);
-
-void afficherLegendePlateau();
-
-//destructeur
-~Jeu() {
-   //nothing to do here
-}
+    /**
+     * @brief Affiche la légende du plateau pour aider les joueurs à comprendre les éléments présents.
+     */
+    void afficherLegendePlateau();
 };
-#endif // JEU_H
+#endif
