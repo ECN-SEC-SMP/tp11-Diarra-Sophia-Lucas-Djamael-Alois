@@ -279,7 +279,7 @@ static char lettreTuile(int val) {
         case 1: return 'C';  // carré
         case 2: return 'L';  // losange
         case 3: return 'E';  // étoile
-        case 4: return 'O';  // rond
+        case 4: return 'I';  // rond
         default:return '?';
     }
 }
@@ -336,6 +336,7 @@ vector<pair<int, int>> Plateau::getCoordonneesCases(int valeur) const {
         for (int j = 0; j < 33; ++j) {
             if (grille[i][j] == valeur) {
                 coordonnees.push_back({i, j});
+                // cout<<i<<';'<<j<<endl;
             }
         }
     }
@@ -352,25 +353,25 @@ void Plateau::majPlateau(const std::vector<Robot*>& robots) {
         }
     }
 
-    // 2) Replacer les robots uniquement sur des cases libres (== 1)
-    for (auto robot : robots) {
-        int lx = robot->getX();
-        int ly = robot->getY();
-        int gx = 1 + 2 * lx;
-        int gy = 1 + 2 * ly;
+    // // 2) Replacer les robots uniquement sur des cases libres (== 1)
+    // for (auto robot : robots) {
+    //     int lx = robot->getX();
+    //     int ly = robot->getY();
+    //     int gx = 1 + 2 * lx;
+    //     int gy = 1 + 2 * ly;
 
-        // Vérifie les bornes
-        if (gx >= 0 && gx < 32 && gy >= 0 && gy < 32) {
-            if (grille[gx][gy] == 1) {
-                grille[gx][gy] = 4 + robot->getCouleur();
-            } else {
-                std::cerr << "Impossible de placer robot à (" << lx << ", " << ly 
-                          << ") : case occupée (valeur=" << grille[gx][gy] << ")\n";
-            }
-        } else {
-            std::cerr << "Coordonnées hors limites : (" << lx << ", " << ly << ")\n";
-        }
-    }
+    //     // Vérifie les bornes
+    //     if (gx >= 0 && gx < 32 && gy >= 0 && gy < 32) {
+    //         if (grille[gx][gy] == 1) {
+    //             grille[gx][gy] = 4 + robot->getCouleur();
+    //         } else {
+    //             std::cerr << "Impossible de placer robot à (" << lx << ", " << ly 
+    //                       << ") : case occupée (valeur=" << grille[gx][gy] << ")\n";
+    //         }
+    //     } else {
+    //         std::cerr << "Coordonnées hors limites : (" << lx << ", " << ly << ")\n";
+    //     }
+    // }
 }
 
 
@@ -407,9 +408,10 @@ void Plateau::placerTuilesObjectif(vector<Tuile_objectif>& tuilesPlacees) {
         // Calcule la valeur à inscrire dans la grille
         int valeur = 10 * toutesTuiles[i].getSymbole() + toutesTuiles[i].getCouleur();
         grille[gx][gy] = valeur;
-
         // Ajoute à la liste des tuiles placées
         tuilesPlacees.push_back(toutesTuiles[i]);
+        // cout<<"valeur associée à la tuile "<<valeur<<':';
+        // printTuile(&tuilesPlacees[i]);
     }
 }
 // void Plateau::afficherPlateau()
@@ -418,7 +420,7 @@ void Plateau::placerTuilesObjectif(vector<Tuile_objectif>& tuilesPlacees) {
 //     {
 //         for (int j = 0; j < 32; j++)
 //         {
-//             cout << this->grille[i][j];
+//             cout <<"|"<< this->grille[i][j];
 //         }
 //         cout << endl;
 //     }

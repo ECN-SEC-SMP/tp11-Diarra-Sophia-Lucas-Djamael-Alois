@@ -112,3 +112,53 @@ TypeSymbole Tuile_objectif::getSymbole() const
 {
     return this->symbole;
 }
+
+void printTuile(Tuile_objectif *latuile)
+{
+    string nomsymbole, nomcouleur;
+
+    // Afficher un message informant sur la tuile choisi
+    switch (latuile->getCouleur())
+    {
+    case ROUGE:
+        nomcouleur = "rouge";
+        break;
+    case VERT:
+        nomcouleur = "vert";
+        break;
+    case BLEU:
+        nomcouleur = "bleu";
+        break;
+    case JAUNE:
+        nomcouleur = "jaune";
+        break;
+    case MULTICOLORE:
+        nomcouleur = "multicolore";
+        break;
+    default:
+        break;
+    }
+    
+    switch (latuile->getSymbole())
+    {
+    case ROND:
+        nomsymbole = "rond";
+        break;
+    case CARRE:
+        nomsymbole = "carré";
+        break;
+    case LOSANGE:
+        nomsymbole = "losange";
+        break;
+    case ETOILE:
+        nomsymbole = "étoile";
+        break;
+
+    default:
+        break;
+    }
+    cout << "La tuile est de couleur " << nomcouleur
+         << " et de symbole " << nomsymbole <<
+         endl<<"et est positionnée en ("<<latuile->get_X()<<';'<<latuile->get_Y()<<")."<<endl;
+
+}

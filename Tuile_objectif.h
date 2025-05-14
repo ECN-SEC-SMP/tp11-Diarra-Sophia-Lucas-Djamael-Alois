@@ -51,5 +51,5 @@ public:
     int get_X() const;
     int get_Y() const;
 };
-
+void printTuile(Tuile_objectif *latuile);
 #endif
