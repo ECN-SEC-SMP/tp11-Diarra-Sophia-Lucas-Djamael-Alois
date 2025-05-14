@@ -6,8 +6,8 @@
 #include <sstream>
 #include <map>
 #include <vector>
-#include "Tuile_objectif.h" // Inclusion de la classe Tuile_objectif pour le type Couleur
-#include "plateau.h"        // Inclusion de la classe Plateau pour le type Plateau
+#include "Tuile_objectif.h"
+#include "plateau.h"
 
 using namespace std;
 

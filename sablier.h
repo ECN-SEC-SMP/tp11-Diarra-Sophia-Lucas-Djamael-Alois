@@ -1,3 +1,6 @@
+/// \file sablier.h
+/// \brief Déclaration de la classe Sablier.
+
 #pragma once
 
 #include <iostream>
@@ -8,15 +11,24 @@
 
 using namespace std;
 
-
-
-class Sablier{
+/// \class Sablier
+/// \brief Classe représentant un minuteur simple avec affichage du temps restant.
+class Sablier
+{
 protected:
+    /// \brief Temps actuel du sablier (en secondes).
     int temps;
+
 public:
+    ///
+    /// \brief Constructeur par défaut.
+    /// Initialise le sablier à 0 seconde.
+    ///
     Sablier();
 
-    //affiche le nombre de seconde (timer de 60 secondes quand fonction appelée)
-    void start_timer(); 
-
+    ///
+    /// \brief Lance un compte à rebours de 3 secondes.
+    /// Affiche le temps restant dans la console à chaque seconde.
+    ///
+    void start_timer();
 };

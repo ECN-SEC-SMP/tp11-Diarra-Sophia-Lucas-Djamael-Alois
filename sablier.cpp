@@ -1,26 +1,40 @@
-// Class Temps
+/// \file sablier.cpp
+/// \brief Implémentation de la classe Sablier
 
 #include "sablier.h"
 #include <iostream>
-#include <unistd.h> // Pour sleep()
+#include <unistd.h>
 
 using namespace std;
 
-// Constructeur par défaut
+///
+/// \class Sablier
+/// \brief Classe représentant un minuteur simple de 3 secondes.
+///
+
+// ====================== Constructeur ======================
+
+///
+/// \brief Constructeur par défaut de la classe Sablier
+/// Initialise le temps à 0.
+///
 Sablier::Sablier(){
-    // Initialisation du temps à 0
     this->temps = 0;
 }
 
 
-// Fonction pour démarrer le timer
+// ====================== Méthodes ======================
+
+///
+/// \brief Lance un compte à rebours de 3 secondes.
+/// Affiche le temps restant à chaque seconde dans la console.
+///
 void Sablier::start_timer() {
 
     for(int i = 2; i >= 0; i--) {
         // Affiche le temps restant
         this->temps = i;
         cout << "Temps restant : " << this->temps << " secondes" << endl;
-        // Attendre une seconde
-        sleep(1);
+        sleep(1);///< Attente d'une seconde
     }
 }
