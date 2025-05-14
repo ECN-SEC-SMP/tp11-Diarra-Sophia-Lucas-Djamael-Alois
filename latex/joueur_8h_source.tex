@@ -1,0 +1,42 @@
+\doxysection{joueur.\+h}
+\hypertarget{joueur_8h_source}{}\label{joueur_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_joueur_add6c98be3020651d84f6d75ccc1d867e}{Joueur}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{string}\ nom;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ nom\ du\ joueur}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ score;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ score\ du\ joueur\ pendant\ la\ partie}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ nombreDeDeplacements;\ \textcolor{comment}{//\ nombre\ de\ deplacements\ effectues\ par\ le\ joueur\ pendant\ la\ manche}}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_joueur_add6c98be3020651d84f6d75ccc1d867e}{Joueur}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_joueur_add6c98be3020651d84f6d75ccc1d867e}{Joueur}}(\textcolor{keywordtype}{string}\ nom,\ \textcolor{keywordtype}{int}\ score,\ \textcolor{keywordtype}{int}\ nombreDeDeplacements);\ \textcolor{comment}{//\ constructeur\ avec\ parametres}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ Getters}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_joueur_aa2ff1bfeeb5e1f631750d70c06b8c6d0}{getNom}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ retourne\ le\ nom\ du\ joueur}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joueur_a4bd1992dd760d726bb61b5555296d130}{getNombreDeDeplacements}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ retourne\ le\ nombre\ de\ deplacements\ effectues\ par\ le\ joueur}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joueur_adf4397ffb7fcc340c2d2cc6c45edc8e2}{getScore}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ retourne\ le\ score\ du\ joueur}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ Setters}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_joueur_a1acb893d7ebb7fff056ce551beb6bbdb}{setNom}}(\textcolor{keywordtype}{string}\ nom);\ \textcolor{comment}{//\ modifie\ le\ nom\ du\ joueur}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_joueur_aa7d833f3aa6058cd51a30c7e6270e696}{setScore}}(\textcolor{keywordtype}{int}\ score);\ \textcolor{comment}{//\ modifie\ le\ score\ du\ joueur}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_joueur_aa62c355e74bc06acdef00085add76ff1}{setNombreDeDeplacements}}(\textcolor{keywordtype}{int}\ nombreDeDeplacements);\ \textcolor{comment}{//\ modifie\ le\ nombre\ de\ deplacements\ effectues\ par\ le\ joueur}}
+\DoxyCodeLine{00075\ \};}
+
+\end{DoxyCode}

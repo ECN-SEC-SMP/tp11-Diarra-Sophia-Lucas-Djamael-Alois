@@ -1,0 +1,131 @@
+\doxysection{Jeu Class Reference}
+\hypertarget{class_jeu}{}\label{class_jeu}\index{Jeu@{Jeu}}
+
+
+Classe représentant l\textquotesingle{}ensemble du jeu \+: le plateau, les joueurs, les robots et les objectifs.  
+
+
+
+
+{\ttfamily \#include $<$jeu.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jeu_acc5795ee00edf75516d3dfe65be3e6d6}{Jeu}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de la classe \doxylink{class_jeu}{Jeu}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jeu_a42632a14f75e9b7dc333ea49e52eafe1}{set\+\_\+\+Joueurs}} ()
+\begin{DoxyCompactList}\small\item\em Initialise la liste des joueurs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jeu_a265eeff9a9859e7f35c5948ed18ba917}{annoncer\+\_\+\+Solution}} ()
+\begin{DoxyCompactList}\small\item\em Permet à un joueur d\textquotesingle{}annoncer une solution. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jeu_ad894457e004f5c0f39f8ff6cf44f236e}{proposer\+\_\+\+Solution}} ()
+\begin{DoxyCompactList}\small\item\em Permet au joueur ayant annoncé la solution de la proposer en détail. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jeu_a5016b2d207493ef44fe0366945a0c294}{tirer\+\_\+tuile\+\_\+objectif}} ()
+\begin{DoxyCompactList}\small\item\em Tire une nouvelle tuile objectif aléatoire. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_jeu_adaaf814d8457cd58c03ef110f14ba4ca}{valider\+\_\+solution}} (string Nom\+Joueur)
+\begin{DoxyCompactList}\small\item\em Valide si un joueur a bien trouvé la bonne solution. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jeu_a819624d0941634da005b672a1b3767c4}{afficher\+Legende\+Plateau}} ()
+\begin{DoxyCompactList}\small\item\em Affiche la légende du plateau pour aider les joueurs à comprendre les éléments présents. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe représentant l\textquotesingle{}ensemble du jeu \+: le plateau, les joueurs, les robots et les objectifs. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_jeu_acc5795ee00edf75516d3dfe65be3e6d6}\index{Jeu@{Jeu}!Jeu@{Jeu}}
+\index{Jeu@{Jeu}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{Jeu()}{Jeu()}}
+{\footnotesize\ttfamily \label{class_jeu_acc5795ee00edf75516d3dfe65be3e6d6} 
+Jeu\+::\+Jeu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut de la classe \doxylink{class_jeu}{Jeu}. 
+
+Constructeur de la classe \doxylink{class_jeu}{Jeu} qui initialise les robots, le plateau et les joueurs. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_jeu_a819624d0941634da005b672a1b3767c4}\index{Jeu@{Jeu}!afficherLegendePlateau@{afficherLegendePlateau}}
+\index{afficherLegendePlateau@{afficherLegendePlateau}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{afficherLegendePlateau()}{afficherLegendePlateau()}}
+{\footnotesize\ttfamily \label{class_jeu_a819624d0941634da005b672a1b3767c4} 
+void Jeu\+::afficher\+Legende\+Plateau (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Affiche la légende du plateau pour aider les joueurs à comprendre les éléments présents. 
+
+Affiche la légende du plateau. \Hypertarget{class_jeu_a265eeff9a9859e7f35c5948ed18ba917}\index{Jeu@{Jeu}!annoncer\_Solution@{annoncer\_Solution}}
+\index{annoncer\_Solution@{annoncer\_Solution}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{annoncer\_Solution()}{annoncer\_Solution()}}
+{\footnotesize\ttfamily \label{class_jeu_a265eeff9a9859e7f35c5948ed18ba917} 
+void Jeu\+::annoncer\+\_\+\+Solution (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Permet à un joueur d\textquotesingle{}annoncer une solution. 
+
+Lance le sablier pour démarrer la phase de recherche.
+
+Cette fonction est appelée lorsqu\textquotesingle{}un joueur pense avoir trouvé une solution. \Hypertarget{class_jeu_ad894457e004f5c0f39f8ff6cf44f236e}\index{Jeu@{Jeu}!proposer\_Solution@{proposer\_Solution}}
+\index{proposer\_Solution@{proposer\_Solution}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{proposer\_Solution()}{proposer\_Solution()}}
+{\footnotesize\ttfamily \label{class_jeu_ad894457e004f5c0f39f8ff6cf44f236e} 
+void Jeu\+::proposer\+\_\+\+Solution (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Permet au joueur ayant annoncé la solution de la proposer en détail. 
+
+Permet au joueur de déplacer les robots et d\textquotesingle{}afficher la mise à jour du plateau.
+
+Cette fonction est utilisée pour vérifier si le joueur avait raison. \Hypertarget{class_jeu_a42632a14f75e9b7dc333ea49e52eafe1}\index{Jeu@{Jeu}!set\_Joueurs@{set\_Joueurs}}
+\index{set\_Joueurs@{set\_Joueurs}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{set\_Joueurs()}{set\_Joueurs()}}
+{\footnotesize\ttfamily \label{class_jeu_a42632a14f75e9b7dc333ea49e52eafe1} 
+void Jeu\+::set\+\_\+\+Joueurs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initialise la liste des joueurs. 
+
+Ajoute des joueurs à la partie en demandant leur nom.
+
+Demande à l\textquotesingle{}utilisateur de renseigner les informations nécessaires. \Hypertarget{class_jeu_a5016b2d207493ef44fe0366945a0c294}\index{Jeu@{Jeu}!tirer\_tuile\_objectif@{tirer\_tuile\_objectif}}
+\index{tirer\_tuile\_objectif@{tirer\_tuile\_objectif}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{tirer\_tuile\_objectif()}{tirer\_tuile\_objectif()}}
+{\footnotesize\ttfamily \label{class_jeu_a5016b2d207493ef44fe0366945a0c294} 
+void Jeu\+::tirer\+\_\+tuile\+\_\+objectif (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Tire une nouvelle tuile objectif aléatoire. 
+
+Tire une tuile objectif aléatoire et la place au centre du plateau.
+
+Cette tuile devient la nouvelle cible des joueurs. \Hypertarget{class_jeu_adaaf814d8457cd58c03ef110f14ba4ca}\index{Jeu@{Jeu}!valider\_solution@{valider\_solution}}
+\index{valider\_solution@{valider\_solution}!Jeu@{Jeu}}
+\doxysubsubsection{\texorpdfstring{valider\_solution()}{valider\_solution()}}
+{\footnotesize\ttfamily \label{class_jeu_adaaf814d8457cd58c03ef110f14ba4ca} 
+bool Jeu\+::valider\+\_\+solution (\begin{DoxyParamCaption}\item[{string}]{Nom\+Joueur}{}\end{DoxyParamCaption})}
+
+
+
+Valide si un joueur a bien trouvé la bonne solution. 
+
+Vérifie si la solution d\textquotesingle{}un joueur est correcte en fonction de la position de la tuile objectif.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Nom\+Joueur} & Nom du joueur qui propose la solution. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si la solution est correcte, false sinon. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{jeu_8h}{jeu.\+h}}\item 
+jeu.\+cpp\end{DoxyCompactItemize}

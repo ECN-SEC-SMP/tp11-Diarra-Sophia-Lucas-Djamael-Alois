@@ -1,0 +1,55 @@
+\doxysection{plateau.\+h}
+\hypertarget{plateau_8h_source}{}\label{plateau_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PLATEAU\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PLATEAU\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}robot.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_tuile__objectif_8h}{Tuile\_objectif.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_robot}{Robot}};\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ VIDE\ =\ 0,\ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ NON\_VIDE\ =\ 1,\ }
+\DoxyCodeLine{00020\ \ \ \ \ VOITURE\ =\ 2,\ \ }
+\DoxyCodeLine{00021\ \ \ \ \ TUILE\ =\ 3,\ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ MUR\ =\ 4\ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \}\ Element\_Grille;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_plateau_a07026170529dd928238ee45de0a797d7}{Plateau}}}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ grille[32][32];\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_plateau_a07026170529dd928238ee45de0a797d7}{Plateau}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plateau_affad33e68d8440e10feffe000f586cd3}{placerRobot}}(\mbox{\hyperlink{class_robot}{Robot}}\ *robot);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plateau_aa417a49b3fef4ada1b84ebff579b98fd}{afficherPlateau}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plateau_ae3684dfacf2b7286463b1c321619f46b}{placerMur}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{string}\ orientation);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plateau_a15b410febc09415c71596b478f523e15}{ajouterMursQuadrants}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_plateau_a6e4209097af50e01f21c12155ab206ec}{placerAngle}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&orientation);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plateau_a48884dbffe52d65232336390e52ce1fc}{ajouterAnglesQuadrants}}();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00088\ \ \ \ \ vector<pair<int,\ int>>\ \mbox{\hyperlink{class_plateau_ad621143c1aa1b5710b3a52c22945b746}{getCoordonneesCases}}(\textcolor{keywordtype}{int}\ valeur)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plateau_a20f317b5f81b001274afa994fe69ba51}{placerTuilesObjectif}}(vector<Tuile\_objectif>\ \&tuilesPlacees);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plateau_a758ec8d64f030d6df799c2ba4dc8f688}{majPlateau}}(\textcolor{keyword}{const}\ std::vector<Robot\ *>\ \&robots);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_plateau_a41b2508a4c5653aaa3cf1f6c6b28443b}{getGrille}}(\textcolor{keywordtype}{int}\ i,\ \textcolor{keywordtype}{int}\ j)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00109\ \};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

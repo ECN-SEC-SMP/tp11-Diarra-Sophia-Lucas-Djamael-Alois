@@ -1,0 +1,171 @@
+\doxysection{Joueur Class Reference}
+\hypertarget{class_joueur}{}\label{class_joueur}\index{Joueur@{Joueur}}
+
+
+Représente un joueur dans le jeu avec un nom, un score et un nombre de déplacements.  
+
+
+
+
+{\ttfamily \#include $<$joueur.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_joueur_add6c98be3020651d84f6d75ccc1d867e}\label{class_joueur_add6c98be3020651d84f6d75ccc1d867e} 
+{\bfseries Joueur} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut du joueur. Initialise le nom à "{}\+Joueur"{}, le score à 0 et le nombre de déplacements à 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_joueur_ae4144b069d5cdc406d8ae23a93b479c9}{Joueur}} (string nom, int score, int nombre\+De\+Deplacements)
+\begin{DoxyCompactList}\small\item\em Constructeur du joueur avec des paramètres spécifiés. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_joueur_aa2ff1bfeeb5e1f631750d70c06b8c6d0}{get\+Nom}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le nom du joueur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_joueur_a4bd1992dd760d726bb61b5555296d130}{get\+Nombre\+De\+Deplacements}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le nombre de déplacements effectués par le joueur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_joueur_adf4397ffb7fcc340c2d2cc6c45edc8e2}{get\+Score}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le score du joueur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_joueur_a1acb893d7ebb7fff056ce551beb6bbdb}{set\+Nom}} (string nom)
+\begin{DoxyCompactList}\small\item\em Modifie le nom du joueur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_joueur_aa7d833f3aa6058cd51a30c7e6270e696}{set\+Score}} (int score)
+\begin{DoxyCompactList}\small\item\em Modifie le score du joueur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_joueur_aa62c355e74bc06acdef00085add76ff1}{set\+Nombre\+De\+Deplacements}} (int nombre\+De\+Deplacements)
+\begin{DoxyCompactList}\small\item\em Modifie le nombre de déplacements effectués par le joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_joueur_a251a7192f61dae541f80cbff3914f208}\label{class_joueur_a251a7192f61dae541f80cbff3914f208} 
+string {\bfseries nom}
+\item 
+\Hypertarget{class_joueur_a680896b9ff71c2762ae653ef6aa7c8ce}\label{class_joueur_a680896b9ff71c2762ae653ef6aa7c8ce} 
+int {\bfseries score}
+\item 
+\Hypertarget{class_joueur_a163a2cdfa37684a8374c6bb58e066e43}\label{class_joueur_a163a2cdfa37684a8374c6bb58e066e43} 
+int {\bfseries nombre\+De\+Deplacements}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Représente un joueur dans le jeu avec un nom, un score et un nombre de déplacements. 
+
+Représente un joueur dans le jeu avec un nom, un score et un nombre de déplacements effectués pendant la partie. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_joueur_ae4144b069d5cdc406d8ae23a93b479c9}\index{Joueur@{Joueur}!Joueur@{Joueur}}
+\index{Joueur@{Joueur}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{Joueur()}{Joueur()}}
+{\footnotesize\ttfamily \label{class_joueur_ae4144b069d5cdc406d8ae23a93b479c9} 
+Joueur\+::\+Joueur (\begin{DoxyParamCaption}\item[{string}]{nom}{, }\item[{int}]{score}{, }\item[{int}]{nombre\+De\+Deplacements}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur du joueur avec des paramètres spécifiés. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & Le nom du joueur. \\
+\hline
+{\em score} & Le score du joueur. \\
+\hline
+{\em nombre\+De\+Deplacements} & Le nombre de déplacements effectués par le joueur.\\
+\hline
+{\em nom} & Le nom du joueur. \\
+\hline
+{\em score} & Le score du joueur. \\
+\hline
+{\em nombre\+De\+Deplacements} & Le nombre de déplacements du joueur. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_joueur_aa2ff1bfeeb5e1f631750d70c06b8c6d0}\index{Joueur@{Joueur}!getNom@{getNom}}
+\index{getNom@{getNom}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{getNom()}{getNom()}}
+{\footnotesize\ttfamily \label{class_joueur_aa2ff1bfeeb5e1f631750d70c06b8c6d0} 
+string Joueur\+::get\+Nom (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retourne le nom du joueur. 
+
+\begin{DoxyReturn}{Returns}
+Le nom du joueur. 
+\end{DoxyReturn}
+\Hypertarget{class_joueur_a4bd1992dd760d726bb61b5555296d130}\index{Joueur@{Joueur}!getNombreDeDeplacements@{getNombreDeDeplacements}}
+\index{getNombreDeDeplacements@{getNombreDeDeplacements}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{getNombreDeDeplacements()}{getNombreDeDeplacements()}}
+{\footnotesize\ttfamily \label{class_joueur_a4bd1992dd760d726bb61b5555296d130} 
+int Joueur\+::get\+Nombre\+De\+Deplacements (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retourne le nombre de déplacements effectués par le joueur. 
+
+\begin{DoxyReturn}{Returns}
+Le nombre de déplacements effectués.
+
+Le nombre de déplacements du joueur. 
+\end{DoxyReturn}
+\Hypertarget{class_joueur_adf4397ffb7fcc340c2d2cc6c45edc8e2}\index{Joueur@{Joueur}!getScore@{getScore}}
+\index{getScore@{getScore}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{getScore()}{getScore()}}
+{\footnotesize\ttfamily \label{class_joueur_adf4397ffb7fcc340c2d2cc6c45edc8e2} 
+int Joueur\+::get\+Score (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retourne le score du joueur. 
+
+\begin{DoxyReturn}{Returns}
+Le score du joueur. 
+\end{DoxyReturn}
+\Hypertarget{class_joueur_a1acb893d7ebb7fff056ce551beb6bbdb}\index{Joueur@{Joueur}!setNom@{setNom}}
+\index{setNom@{setNom}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{setNom()}{setNom()}}
+{\footnotesize\ttfamily \label{class_joueur_a1acb893d7ebb7fff056ce551beb6bbdb} 
+void Joueur\+::set\+Nom (\begin{DoxyParamCaption}\item[{string}]{nom}{}\end{DoxyParamCaption})}
+
+
+
+Modifie le nom du joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & Le nouveau nom du joueur. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_joueur_aa62c355e74bc06acdef00085add76ff1}\index{Joueur@{Joueur}!setNombreDeDeplacements@{setNombreDeDeplacements}}
+\index{setNombreDeDeplacements@{setNombreDeDeplacements}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{setNombreDeDeplacements()}{setNombreDeDeplacements()}}
+{\footnotesize\ttfamily \label{class_joueur_aa62c355e74bc06acdef00085add76ff1} 
+void Joueur\+::set\+Nombre\+De\+Deplacements (\begin{DoxyParamCaption}\item[{int}]{nombre\+De\+Deplacements}{}\end{DoxyParamCaption})}
+
+
+
+Modifie le nombre de déplacements effectués par le joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre\+De\+Deplacements} & Le nouveau nombre de déplacements. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_joueur_aa7d833f3aa6058cd51a30c7e6270e696}\index{Joueur@{Joueur}!setScore@{setScore}}
+\index{setScore@{setScore}!Joueur@{Joueur}}
+\doxysubsubsection{\texorpdfstring{setScore()}{setScore()}}
+{\footnotesize\ttfamily \label{class_joueur_aa7d833f3aa6058cd51a30c7e6270e696} 
+void Joueur\+::set\+Score (\begin{DoxyParamCaption}\item[{int}]{score}{}\end{DoxyParamCaption})}
+
+
+
+Modifie le score du joueur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & Le nouveau score du joueur. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+joueur.\+h\item 
+joueur.\+cpp\end{DoxyCompactItemize}

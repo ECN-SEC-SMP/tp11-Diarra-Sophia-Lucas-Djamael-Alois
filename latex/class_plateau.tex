@@ -1,0 +1,205 @@
+\doxysection{Plateau Class Reference}
+\hypertarget{class_plateau}{}\label{class_plateau}\index{Plateau@{Plateau}}
+
+
+Classe représentant le plateau de jeu. Cette classe gère l\textquotesingle{}état du plateau, l\textquotesingle{}ajout des éléments (robots, murs, tuiles, etc.) et l\textquotesingle{}affichage du plateau.  
+
+
+
+
+{\ttfamily \#include $<$plateau.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_plateau_a07026170529dd928238ee45de0a797d7}{Plateau}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{class_plateau}{Plateau}. Initialise un plateau vide avec une grille de 32x32 cases. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plateau_affad33e68d8440e10feffe000f586cd3}{placer\+Robot}} (\mbox{\hyperlink{class_robot}{Robot}} \texorpdfstring{$\ast$}{*}robot)
+\begin{DoxyCompactList}\small\item\em Place un robot sur le plateau. \end{DoxyCompactList}\item 
+\Hypertarget{class_plateau_aa417a49b3fef4ada1b84ebff579b98fd}\label{class_plateau_aa417a49b3fef4ada1b84ebff579b98fd} 
+void {\bfseries afficher\+Plateau} ()
+\begin{DoxyCompactList}\small\item\em Affiche le plateau de jeu. Affiche l\textquotesingle{}état actuel de la grille du plateau dans la console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plateau_ae3684dfacf2b7286463b1c321619f46b}{placer\+Mur}} (int x, int y, string orientation)
+\begin{DoxyCompactList}\small\item\em Place un mur à une position donnée avec une orientation spécifiée. \end{DoxyCompactList}\item 
+\Hypertarget{class_plateau_a15b410febc09415c71596b478f523e15}\label{class_plateau_a15b410febc09415c71596b478f523e15} 
+void {\bfseries ajouter\+Murs\+Quadrants} ()
+\begin{DoxyCompactList}\small\item\em Ajoute des murs dans les différents quadrants du plateau. Cette fonction ajoute des murs à des positions spécifiques du plateau. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_plateau_a6e4209097af50e01f21c12155ab206ec}{placer\+Angle}} (int row, int col, const string \&orientation)
+\begin{DoxyCompactList}\small\item\em Place un angle (ex. un virage) sur le plateau. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plateau_a48884dbffe52d65232336390e52ce1fc}{ajouter\+Angles\+Quadrants}} ()
+\begin{DoxyCompactList}\small\item\em Ajoute des angles dans les différents quadrants du plateau. Cette fonction ajoute des angles (par exemple, des virages) dans les quadrants du plateau. \end{DoxyCompactList}\item 
+vector$<$ pair$<$ int, int $>$ $>$ \mbox{\hyperlink{class_plateau_ad621143c1aa1b5710b3a52c22945b746}{get\+Coordonnees\+Cases}} (int valeur) const
+\begin{DoxyCompactList}\small\item\em Retourne les coordonnées des cases ayant une valeur spécifiée. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plateau_a20f317b5f81b001274afa994fe69ba51}{placer\+Tuiles\+Objectif}} (vector$<$ \mbox{\hyperlink{class_tuile__objectif}{Tuile\+\_\+objectif}} $>$ \&tuiles\+Placees)
+\begin{DoxyCompactList}\small\item\em Place les tuiles objectifs sur le plateau. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_plateau_a758ec8d64f030d6df799c2ba4dc8f688}{maj\+Plateau}} (const std\+::vector$<$ \mbox{\hyperlink{class_robot}{Robot}} \texorpdfstring{$\ast$}{*} $>$ \&robots)
+\begin{DoxyCompactList}\small\item\em Met à jour l\textquotesingle{}état du plateau en fonction des positions des robots. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_plateau_a41b2508a4c5653aaa3cf1f6c6b28443b}{get\+Grille}} (int i, int j) const
+\begin{DoxyCompactList}\small\item\em Retourne la valeur de la case à une position donnée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe représentant le plateau de jeu. Cette classe gère l\textquotesingle{}état du plateau, l\textquotesingle{}ajout des éléments (robots, murs, tuiles, etc.) et l\textquotesingle{}affichage du plateau. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_plateau_a07026170529dd928238ee45de0a797d7}\index{Plateau@{Plateau}!Plateau@{Plateau}}
+\index{Plateau@{Plateau}!Plateau@{Plateau}}
+\doxysubsubsection{\texorpdfstring{Plateau()}{Plateau()}}
+{\footnotesize\ttfamily \label{class_plateau_a07026170529dd928238ee45de0a797d7} 
+Plateau\+::\+Plateau (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{class_plateau}{Plateau}. Initialise un plateau vide avec une grille de 32x32 cases. 
+
+Constructeur par défaut du plateau. Initialise un plateau vide avec une grille de 32x32 cases. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_plateau_a48884dbffe52d65232336390e52ce1fc}\index{Plateau@{Plateau}!ajouterAnglesQuadrants@{ajouterAnglesQuadrants}}
+\index{ajouterAnglesQuadrants@{ajouterAnglesQuadrants}!Plateau@{Plateau}}
+\doxysubsubsection{\texorpdfstring{ajouterAnglesQuadrants()}{ajouterAnglesQuadrants()}}
+{\footnotesize\ttfamily \label{class_plateau_a48884dbffe52d65232336390e52ce1fc} 
+void Plateau\+::ajouter\+Angles\+Quadrants (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Ajoute des angles dans les différents quadrants du plateau. Cette fonction ajoute des angles (par exemple, des virages) dans les quadrants du plateau. 
+
+Ajoute des angles dans les différents quadrants du plateau. Cette fonction ajoute des angles dans les quadrants du plateau. \Hypertarget{class_plateau_ad621143c1aa1b5710b3a52c22945b746}\index{Plateau@{Plateau}!getCoordonneesCases@{getCoordonneesCases}}
+\index{getCoordonneesCases@{getCoordonneesCases}!Plateau@{Plateau}}
+\doxysubsubsection{\texorpdfstring{getCoordonneesCases()}{getCoordonneesCases()}}
+{\footnotesize\ttfamily \label{class_plateau_ad621143c1aa1b5710b3a52c22945b746} 
+vector$<$ pair$<$ int, int $>$ $>$ Plateau\+::get\+Coordonnees\+Cases (\begin{DoxyParamCaption}\item[{int}]{valeur}{}\end{DoxyParamCaption}) const}
+
+
+
+Retourne les coordonnées des cases ayant une valeur spécifiée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em valeur} & La valeur à rechercher sur la grille du plateau. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un vecteur de paires représentant les coordonnées des cases correspondantes. 
+\end{DoxyReturn}
+\Hypertarget{class_plateau_a41b2508a4c5653aaa3cf1f6c6b28443b}\index{Plateau@{Plateau}!getGrille@{getGrille}}
+\index{getGrille@{getGrille}!Plateau@{Plateau}}
+\doxysubsubsection{\texorpdfstring{getGrille()}{getGrille()}}
+{\footnotesize\ttfamily \label{class_plateau_a41b2508a4c5653aaa3cf1f6c6b28443b} 
+int Plateau\+::get\+Grille (\begin{DoxyParamCaption}\item[{int}]{i}{, }\item[{int}]{j}{}\end{DoxyParamCaption}) const}
+
+
+
+Retourne la valeur de la case à une position donnée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & La coordonnée de la ligne. \\
+\hline
+{\em j} & La coordonnée de la colonne. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La valeur de la case à la position (i, j). 
+\end{DoxyReturn}
+\Hypertarget{class_plateau_a758ec8d64f030d6df799c2ba4dc8f688}\index{Plateau@{Plateau}!majPlateau@{majPlateau}}
+\index{majPlateau@{majPlateau}!Plateau@{Plateau}}
+\doxysubsubsection{\texorpdfstring{majPlateau()}{majPlateau()}}
+{\footnotesize\ttfamily \label{class_plateau_a758ec8d64f030d6df799c2ba4dc8f688} 
+void Plateau\+::maj\+Plateau (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_robot}{Robot}} \texorpdfstring{$\ast$}{*} $>$ \&}]{robots}{}\end{DoxyParamCaption})}
+
+
+
+Met à jour l\textquotesingle{}état du plateau en fonction des positions des robots. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em robots} & Un vecteur contenant les robots présents sur le plateau. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plateau_a6e4209097af50e01f21c12155ab206ec}\index{Plateau@{Plateau}!placerAngle@{placerAngle}}
+\index{placerAngle@{placerAngle}!Plateau@{Plateau}}
+\doxysubsubsection{\texorpdfstring{placerAngle()}{placerAngle()}}
+{\footnotesize\ttfamily \label{class_plateau_a6e4209097af50e01f21c12155ab206ec} 
+bool Plateau\+::placer\+Angle (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{col}{, }\item[{const string \&}]{orientation}{}\end{DoxyParamCaption})}
+
+
+
+Place un angle (ex. un virage) sur le plateau. 
+
+Place un angle sur le plateau.
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & La ligne où placer l\textquotesingle{}angle. \\
+\hline
+{\em col} & La colonne où placer l\textquotesingle{}angle. \\
+\hline
+{\em orientation} & L\textquotesingle{}orientation de l\textquotesingle{}angle (par exemple, "{}haut-\/gauche"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si l\textquotesingle{}angle a été placé avec succès, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_plateau_ae3684dfacf2b7286463b1c321619f46b}\index{Plateau@{Plateau}!placerMur@{placerMur}}
+\index{placerMur@{placerMur}!Plateau@{Plateau}}
+\doxysubsubsection{\texorpdfstring{placerMur()}{placerMur()}}
+{\footnotesize\ttfamily \label{class_plateau_ae3684dfacf2b7286463b1c321619f46b} 
+void Plateau\+::placer\+Mur (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{string}]{orientation}{}\end{DoxyParamCaption})}
+
+
+
+Place un mur à une position donnée avec une orientation spécifiée. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & La coordonnée x de la position du mur. \\
+\hline
+{\em y} & La coordonnée y de la position du mur. \\
+\hline
+{\em orientation} & L\textquotesingle{}orientation du mur (par exemple, "{}horizontal"{} ou "{}vertical"{}).\\
+\hline
+{\em x} & La coordonnée x de la position du mur. \\
+\hline
+{\em y} & La coordonnée y de la position du mur. \\
+\hline
+{\em orientation} & L\textquotesingle{}orientation du mur (par exemple, "{}gauche"{}, "{}droite"{}, "{}haut"{}, "{}bas"{}). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plateau_affad33e68d8440e10feffe000f586cd3}\index{Plateau@{Plateau}!placerRobot@{placerRobot}}
+\index{placerRobot@{placerRobot}!Plateau@{Plateau}}
+\doxysubsubsection{\texorpdfstring{placerRobot()}{placerRobot()}}
+{\footnotesize\ttfamily \label{class_plateau_affad33e68d8440e10feffe000f586cd3} 
+void Plateau\+::placer\+Robot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_robot}{Robot}} \texorpdfstring{$\ast$}{*}}]{robot}{}\end{DoxyParamCaption})}
+
+
+
+Place un robot sur le plateau. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em robot} & Un pointeur vers l\textquotesingle{}objet robot à placer sur le plateau. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_plateau_a20f317b5f81b001274afa994fe69ba51}\index{Plateau@{Plateau}!placerTuilesObjectif@{placerTuilesObjectif}}
+\index{placerTuilesObjectif@{placerTuilesObjectif}!Plateau@{Plateau}}
+\doxysubsubsection{\texorpdfstring{placerTuilesObjectif()}{placerTuilesObjectif()}}
+{\footnotesize\ttfamily \label{class_plateau_a20f317b5f81b001274afa994fe69ba51} 
+void Plateau\+::placer\+Tuiles\+Objectif (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_tuile__objectif}{Tuile\+\_\+objectif}} $>$ \&}]{tuiles\+Placees}{}\end{DoxyParamCaption})}
+
+
+
+Place les tuiles objectifs sur le plateau. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tuiles\+Placees} & Un vecteur de tuiles à placer sur le plateau. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+plateau.\+h\item 
+plateau.\+cpp\end{DoxyCompactItemize}
