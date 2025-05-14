@@ -35,7 +35,15 @@ int Robot::getX() const{
 int Robot::getY() const{
     return y;
 }
+void Robot::setX(int _X)
+{
+    this->x = _X;
+}
 
+void Robot::setY(int _Y)
+{
+    this->y = _Y;
+}
 //accesseurs couleur
 TypeCouleur Robot::getCouleur() const{
     return couleur;

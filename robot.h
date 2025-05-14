@@ -73,6 +73,9 @@ public:
 
     //deplacement
     void deplacement(string direction, const vector<Robot*> &robots); //deplace le robot sur le plateau (haut, bas, gauche, droite) jusqu'à obstacle
+
+    void setX(int _X);
+    void setY(int _Y);
 };
 
 //prototype des fonctions

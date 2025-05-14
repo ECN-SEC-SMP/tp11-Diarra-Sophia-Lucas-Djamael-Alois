@@ -27,9 +27,6 @@ Jeu();
 //méthodes
 void set_Joueurs();
 
-//Disposer automatiquement les tuiles dans les angles
-void init_position_tuile(int x, int y, char type_tuile);
-void init_position_tuile();
 void annoncer_Solution();
 
 void proposer_Solution();

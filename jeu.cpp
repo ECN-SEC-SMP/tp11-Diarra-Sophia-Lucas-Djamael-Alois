@@ -44,127 +44,20 @@ void Jeu::set_Joueurs()
     cout << "\n=== Partie commence ===" << endl;
 }
 
-void Jeu::init_position_tuile()
-{
-    srand(static_cast<unsigned>(time(nullptr)));
-
-    // Générer 17 positions uniques
-    vector<pair<int, int>> allAngles;
-    set<pair<int, int>> positions_occupées;
-
-    while (allAngles.size() < 17) {
-        auto angle = this->le_plateau.getRandomAngle();
-        if (positions_occupées.count(angle) == 0) {
-            allAngles.emplace_back(angle);
-            positions_occupées.insert(angle);
-        }
-    }
-
-    array<Tuile_objectif, 17> tuiles;
-    int idx = 0;
-
-    // 16 tuiles : 4 couleurs × 4 symboles
-    for (int c = ROUGE; c <= JAUNE; ++c) {
-        for (int s = LOSANGE; s <= ROND; ++s) {
-            auto [x, y] = allAngles[idx];
-            tuiles[idx] = Tuile_objectif(x, y, static_cast<TypeCouleur>(c), static_cast<TypeSymbole>(s));
-            ++idx;
-        }
-    }
-
-    // 1 tuile multicolore
-    auto [x, y] = allAngles[idx];
-    TypeSymbole sym = static_cast<TypeSymbole>(rand() % 4);
-    tuiles[idx] = Tuile_objectif(x, y, MULTICOLORE, sym);
-
-    // Copier les tuiles dans l'attribut du jeu
-    this->liste_tuiles_objectifs.assign(tuiles.begin(), tuiles.end());
-
-    // Les afficher sur la grille
-    for (const auto& t : this->liste_tuiles_objectifs) {
-        int tx, ty;
-        t.getPosition(&tx, &ty);
-        char symboleAffichage;
-        switch (t.getSymbole()) {
-            case LOSANGE: symboleAffichage = 'L'; break;
-            case CARRE:   symboleAffichage = 'C'; break;
-            case ETOILE:  symboleAffichage = 'E'; break;
-            case ROND:    symboleAffichage = 'R'; break;
-        }
-        le_plateau.placerTuile(tx, ty, symboleAffichage);
-    }
-
-    // Affichage console résumé
-    map<TypeCouleur, map<TypeSymbole, int>> compteur;
-    for (auto& t : tuiles)
-        compteur[t.getCouleur()][t.getSymbole()]++;
-
-    std::cout << "=== Resume des tuiles ===\n";
-    std::cout << "Total : " << tuiles.size() << " tuiles\n";
-    std::cout << "Positions uniques ? " << (positions_occupées.size() == 17 ? "OUI" : "NON") << "\n\n";
-
-    std::cout << "Repartition (couleur = symbole) :\n";
-    for (int c = ROUGE; c <= MULTICOLORE; ++c) {
-        std::cout << " Couleur " << c << " :\n";
-        for (int s = LOSANGE; s <= ROND; ++s) {
-            std::cout << "   Symbole " << s << " = " << compteur[(TypeCouleur)c][(TypeSymbole)s] << "\n";
-        }
-    }
-
-    std::cout << "\nDetail des tuiles :\n";
-    for (size_t i = 0; i < tuiles.size(); ++i) {
-        int tx, ty;
-        tuiles[i].getPosition(&tx, &ty);
-        std::cout << " Tuile[" << i << "] @(" << tx << "," << ty << ") "
-                  << "Couleur=" << tuiles[i].getCouleur() << " Symbole=" << tuiles[i].getSymbole() << "\n";
-    }
-}
-
 Jeu::Jeu()
 {
-    srand(static_cast<unsigned>(time(nullptr)));
 
     // === Étape 1 : Créer les robots (liste de 4 robots de couleurs différentes)
     this->robots = creationRobots();
+    
+    for (auto& robot : this->robots) {
+        this->le_plateau.placerRobot(&robot);
+    }
 
     // === Étape 2 : Initialisation des positions de tuiles
-    init_position_tuile(); // Remplit this->liste_tuiles_objectifs
+    le_plateau.placerTuilesObjectif(this->liste_tuiles_objectifs);
 
-    // === Étape 3 : Générer les murs du plateau
-    le_plateau.genererGrille(); // Ajoute les bords et la croix centrale
 
-    // === Étape 4 : Ajouter des murs aléatoires
-    for (int i = 0; i < 8; ++i) {
-        int x = rand() % 14;
-        int y = rand() % 14;
-        std::string orientation = (rand() % 2 == 0) ? "horizontal" : "vertical";
-        le_plateau.placerMur(x, y, orientation);
-    }
-
-    // === Étape 5 : Ajouter des angles
-    for (int i = 0; i < 5; ++i) {
-        auto angle = le_plateau.getRandomAngle();
-        le_plateau.placerAngle(angle.first, angle.second);
-    }
-
-    // === Étape 6 : Placer les tuiles dans la grille
-    for (auto& t : this->liste_tuiles_objectifs) {
-        int x, y;
-        t.getPosition(&x, &y);
-        char symboleAffichage;
-        switch (t.getSymbole()) {
-            case LOSANGE: symboleAffichage = 'L'; break;
-            case CARRE:   symboleAffichage = 'C'; break;
-            case ETOILE:  symboleAffichage = 'E'; break;
-            case ROND:    symboleAffichage = 'R'; break;
-        }
-        le_plateau.placerTuile(x, y, symboleAffichage);
-    }
-
-    // === Étape 7 : Placer les robots dans la grille
-    for (auto& robot : this->robots) {
-        le_plateau.placerRobot(robot);
-    }
 
     // === Étape 8 : Afficher le plateau et légendes
     std::cout << "\n=== Plateau généré ===\n";
@@ -174,7 +67,6 @@ Jeu::Jeu()
     // === Étape 9 : Ajouter les joueurs
     set_Joueurs();
 }
-
 
 
 // set tuile objectif_actuel, met a jour la position de cette tuile
@@ -245,6 +137,7 @@ void Jeu::proposer_Solution()
         robots[couleurRobot].deplacement(directionInput, robotPtrs);
         cout << "Robot " << couleurInput << " : (" << robots[couleurRobot].getX() << ", " << robots[couleurRobot].getY() << ")" << endl;
 
+        le_plateau.majPlateau(getPointers(robots));
         le_plateau.afficherPlateau();
     }
 

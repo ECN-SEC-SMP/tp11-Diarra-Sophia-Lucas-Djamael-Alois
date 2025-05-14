@@ -5,20 +5,31 @@
 #include <vector>
 #include "robot.h"
 
+
+typedef enum
+{
+    VIDE = 0,
+    NON_VIDE = 1,
+    VOITURE = 2,
+    TUILE =3,
+    MUR = 4
+}Element_Grille;
+
 class Plateau {
 private:
-    int grille[16][16];
+    int grille[32][32];
 
 public:
     Plateau();
-    void genererGrille(); // Met les murs extérieurs
-    void placerMur(int x, int y, std::string orientation);
-    void placerRobot(Robot robot); // Place un robot
+    void placerRobot(Robot* robot); // Place un robot
     void afficherPlateau(); // Affiche le plateau
-
-    void placerAngle(int x, int y); // Place un angle (mur en L)
-    std::pair<int, int> getRandomAngle(); // Fournit une position valide d’angle pour une tuile
-    void placerTuile(int x, int y, char symbole);
+    void placerMur(int x, int y, string orientation);
+    void ajouterMursQuadrants();
+    bool placerAngle(int row, int col, const string& orientation);
+    void ajouterAnglesQuadrants();
+    vector<pair<int, int>> getCoordonneesCases(int valeur) const ;
+    void placerTuilesObjectif(vector<Tuile_objectif>& tuilesPlacees);
+    void majPlateau(const std::vector<Robot*>& robots);
 };
 
 #endif
