@@ -1,6 +1,6 @@
 # TP projet: Ricochet Rebot
 ## Introduction                                      
-Ce projet s'inscrit dans le cadre du module de **spécification et modélisation de programme**. L'objectif principal est d'implémenter le jeu *RICOCHET ROBOT* en utilisant l'ensemble des concepts liés à la programmation orientée objet. Les principlaes compétences visées sont principalement: le développement de l'esprit de travail collectif, faire des choix de conception et mobiliser les aspects du cours théorique dans un cadre pratique.
+Ce projet s'inscrit dans le cadre du module de **spécification et modélisation de programme**. L'objectif principal est d'implémenter le jeu *RICOCHET ROBOT* en utilisant l'ensemble des concepts liés à la programmation orientée objet. Les principales compétences visées sont: le développement de l'esprit de travail collectif, faire des choix de conception et mobiliser les aspects du cours théorique dans un cadre pratique.
 ## Organisation du travail
 Nous sommes cinq personnes à avoir réalisé ce projet: Alois, Diarra, Djamael, Lucas et Sophia. Nous nous sommes répartis le travail en fonction des choix de conception que nous avons fait. La répartition des taches sera mentionnée dans la prochaine partie.
 A travers ce projet, nous avons mobilisé plusieurs outils: des outils de versionning comme **GIT**, **GITHUB**, des outils de conception comme **l'UML**, des outils de travail collaboratif comme **EXCALIDRAW**. Le langage utilisé pour l'implémentatio est le **C++**.
