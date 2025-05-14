@@ -105,7 +105,7 @@ public:
      * @param j La coordonnée de la colonne.
      * @return La valeur de la case à la position (i, j).
      */
-    int getGrille(int i, int j) const;
+    int& getGrille(int i, int j);
 };
 
 #endif

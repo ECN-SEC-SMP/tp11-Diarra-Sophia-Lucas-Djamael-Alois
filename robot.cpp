@@ -134,6 +134,7 @@ void Robot::deplacement(string direction, const vector<Robot*> &robots, Plateau*
                 y--; // Reculer d'une case
                 //break; // Sortir de la boucle
             }
+            
         }
     nombre_de_deplacements++;
     }else if (direction == "gauche"){

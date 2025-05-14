@@ -53,10 +53,7 @@ Jeu::Jeu()
 
     // === Étape 1 : Créer les robots (liste de 4 robots de couleurs différentes)
     this->robots = creationRobots();
-<<<<<<< HEAD
 
-=======
->>>>>>> 67ac79c63f349f8a4158a705843d27d7b00539cd
     for (auto &robot : this->robots)
     {
         this->le_plateau.placerRobot(&robot);
@@ -64,12 +61,8 @@ Jeu::Jeu()
 
     // === Étape 2 : Initialisation des positions de tuiles
     le_plateau.placerTuilesObjectif(this->liste_tuiles_objectifs);
-
-<<<<<<< HEAD
-    // === Étape 8 : Afficher le plateau et légendes
-=======
     // === Étape 3 : Afficher le plateau et légendes
->>>>>>> 67ac79c63f349f8a4158a705843d27d7b00539cd
+
     std::cout << "\n=== Plateau généré ===\n";
     afficherLegendePlateau();
     le_plateau.afficherPlateau();
@@ -192,7 +185,7 @@ void Jeu::proposer_Solution()
         robots[couleurRobot].deplacement(directionInput, robotPtrs, &le_plateau);
         cout << "Robot " << couleurInput << " : (" << robots[couleurRobot].getX() << ", " << robots[couleurRobot].getY() << ")" << endl;
 
-        le_plateau.majPlateau(getPointers(robots));
+        // le_plateau.majPlateau(getPointers(robots));
         le_plateau.afficherPlateau();
     }
 
@@ -260,17 +253,9 @@ bool Jeu::valider_solution(string NomJoueur)
     }
 }
 
-<<<<<<< HEAD
-// Jeu::~Jeu()
-//{
-//  nothing to do here
-//}
-
-=======
 /**
  * @brief Affiche la légende du plateau.
  */
->>>>>>> 67ac79c63f349f8a4158a705843d27d7b00539cd
 void Jeu::afficherLegendePlateau()
 {
     std::cout << "\n=== LÉGENDE ===\n";

@@ -403,25 +403,25 @@ void Plateau::majPlateau(const std::vector<Robot*>& robots) {
         }
     }
 
-    // // 2) Replacer les robots uniquement sur des cases libres (== 1)
-    // for (auto robot : robots) {
-    //     int lx = robot->getX();
-    //     int ly = robot->getY();
-    //     int gx = 1 + 2 * lx;
-    //     int gy = 1 + 2 * ly;
+    // 2) Replacer les robots uniquement sur des cases libres (== 1)
+    for (auto robot : robots) {
+        int lx = robot->getX();
+        int ly = robot->getY();
+        int gx = 1 + 2 * lx;
+        int gy = 1 + 2 * ly;
 
-    //     // Vérifie les bornes
-    //     if (gx >= 0 && gx < 32 && gy >= 0 && gy < 32) {
-    //         if (grille[gx][gy] == 1) {
-    //             grille[gx][gy] = 4 + robot->getCouleur();
-    //         } else {
-    //             std::cerr << "Impossible de placer robot à (" << lx << ", " << ly 
-    //                       << ") : case occupée (valeur=" << grille[gx][gy] << ")\n";
-    //         }
-    //     } else {
-    //         std::cerr << "Coordonnées hors limites : (" << lx << ", " << ly << ")\n";
-    //     }
-    // }
+        // Vérifie les bornes
+        if (gx >= 0 && gx < 32 && gy >= 0 && gy < 32) {
+            if (grille[gx][gy] == 1) {
+                grille[gx][gy] = 4 + robot->getCouleur();
+            } else {
+                std::cerr << "Impossible de placer robot à (" << lx << ", " << ly 
+                          << ") : case occupée (valeur=" << grille[gx][gy] << ")\n";
+            }
+        } else {
+            std::cerr << "Coordonnées hors limites : (" << lx << ", " << ly << ")\n";
+        }
+    }
 }
 
 /**
@@ -474,7 +474,7 @@ void Plateau::placerTuilesObjectif(vector<Tuile_objectif>& tuilesPlacees) {
  * @param j La coordonnée de la colonne.
  * @return La valeur de la case à la position (i, j).
  */
-int Plateau::getGrille(int i, int j) const {
+int& Plateau::getGrille(int i, int j) {
     return grille[i][j];
 }
 
