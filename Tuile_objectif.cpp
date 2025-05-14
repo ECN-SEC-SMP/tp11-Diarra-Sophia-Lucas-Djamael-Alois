@@ -1,8 +1,13 @@
+/**
+ * @file Tuile_objectif.cpp
+ * @brief Implémentation de la classe Tuile_objectif représentant une tuile avec position, couleur et symbole.
+ */
+
 #include "Tuile_objectif.h"
 
 /**
  * @brief Constructeur de la classe Tuile_objectif.
- * 
+ *
  * Initialise la position, la couleur et le symbole de manière aléatoire.
  */
 Tuile_objectif::Tuile_objectif(/* args */)
@@ -15,7 +20,7 @@ Tuile_objectif::Tuile_objectif(/* args */)
 
 /**
  * @brief Constructeur de la classe Tuile_objectif.
- * 
+ *
  * @param _positionX Position en X à affecter.
  * @param _positionY Position en Y à affecter.
  * @param _couleur   Couleur à affecter.
@@ -31,7 +36,7 @@ Tuile_objectif::Tuile_objectif(int _positionX, int _positionY, TypeCouleur _coul
 
 /**
  * @brief Définit la position de la tuile.
- * 
+ *
  * @param _positionX Position en X à affecter.
  * @param _positionY Position en Y à affecter.
  */
@@ -43,7 +48,7 @@ void Tuile_objectif::setPosition(int _positionX, int _positionY)
 
 /**
  * @brief Définit la couleur de la tuile.
- * 
+ *
  * @param _couleur La nouvelle couleur de la tuile.
  */
 void Tuile_objectif::setCouleur(TypeCouleur _couleur)
@@ -53,7 +58,7 @@ void Tuile_objectif::setCouleur(TypeCouleur _couleur)
 
 /**
  * @brief Définit le symbole de la tuile.
- * 
+ *
  * @param _symbole Le nouveau symbole de la tuile.
  */
 void Tuile_objectif::setSymbole(TypeSymbole _symbole)
@@ -63,7 +68,7 @@ void Tuile_objectif::setSymbole(TypeSymbole _symbole)
 
 /**
  * @brief Récupère la position actuelle de la tuile.
- * 
+ *
  * @param _positionX Pointeur vers une variable recevant la position X.
  * @param _positionY Pointeur vers une variable recevant la position Y.
  */
@@ -75,7 +80,7 @@ void Tuile_objectif::getPosition(int *_positionX, int *_positionY) const
 
 /**
  * @brief Récupère la position X de la tuile.
- * 
+ *
  * @return La position X de la tuile.
  */
 int Tuile_objectif::get_X() const
@@ -85,7 +90,7 @@ int Tuile_objectif::get_X() const
 
 /**
  * @brief Récupère la position Y de la tuile.
- * 
+ *
  * @return La position Y de la tuile.
  */
 int Tuile_objectif::get_Y() const
@@ -95,7 +100,7 @@ int Tuile_objectif::get_Y() const
 
 /**
  * @brief Récupère la couleur de la tuile.
- * 
+ *
  * @return La couleur actuelle de la tuile.
  */
 TypeCouleur Tuile_objectif::getCouleur() const
@@ -105,7 +110,7 @@ TypeCouleur Tuile_objectif::getCouleur() const
 
 /**
  * @brief Récupère le symbole de la tuile.
- * 
+ *
  * @return Le symbole actuel de la tuile.
  */
 TypeSymbole Tuile_objectif::getSymbole() const

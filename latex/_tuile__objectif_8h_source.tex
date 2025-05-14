@@ -1,0 +1,70 @@
+\doxysection{Tuile\+\_\+objectif.\+h}
+\hypertarget{_tuile__objectif_8h_source}{}\label{_tuile__objectif_8h_source}\mbox{\hyperlink{_tuile__objectif_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ \_TUILE\_OBJECTIF\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ \_TUILE\_OBJECTIF\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}stdlib.h"{}}\ \textcolor{comment}{//\ Pour\ utiliser\ la\ fonction\ rand()\ pour\ la\ génération\ de\ nombres\ aléatoires}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <ctime>}\ \ \ \ \textcolor{comment}{//\ Pour\ initialiser\ le\ générateur\ de\ nombres\ aléatoires\ (time(NULL))}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MAX\_POSITION\_X\ 16}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MAX\_POSITION\_Y\ 16}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ NB\_COULEURS\_DIFFS\ 5}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ NB\_SYMBOLES\_DIFFS\ 4}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ ROUGE\ =\ 0,}
+\DoxyCodeLine{00024\ \ \ \ \ VERT\ =\ 1,}
+\DoxyCodeLine{00025\ \ \ \ \ BLEU\ =\ 2,}
+\DoxyCodeLine{00026\ \ \ \ \ JAUNE\ =\ 3,}
+\DoxyCodeLine{00027\ \ \ \ \ MULTICOLORE\ =\ 4}
+\DoxyCodeLine{00028\ \}\ \mbox{\hyperlink{_tuile__objectif_8h_a1cba3a9320a88b6d39d1396cc0bc98d5}{TypeCouleur}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ LOSANGE\ =\ 0,}
+\DoxyCodeLine{00036\ \ \ \ \ CARRE\ =\ 1,}
+\DoxyCodeLine{00037\ \ \ \ \ ETOILE\ =\ 2,}
+\DoxyCodeLine{00038\ \ \ \ \ ROND\ =\ 3}
+\DoxyCodeLine{00039\ \}\ \mbox{\hyperlink{_tuile__objectif_8h_a2e7397bddb25cdb82a925b41a788e72e}{TypeSymbole}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_tuile__objectif_a8e3d52e3a593a6ed3d62132825ccc3f3}{Tuile\_objectif}}}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ positionX,\ positionY;\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{_tuile__objectif_8h_a1cba3a9320a88b6d39d1396cc0bc98d5}{TypeCouleur}}\ couleur;\ \ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{_tuile__objectif_8h_a2e7397bddb25cdb82a925b41a788e72e}{TypeSymbole}}\ symbole;\ \ \ \ \ \ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_tuile__objectif_a8e3d52e3a593a6ed3d62132825ccc3f3}{Tuile\_objectif}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_tuile__objectif_a8e3d52e3a593a6ed3d62132825ccc3f3}{Tuile\_objectif}}(\textcolor{keywordtype}{int}\ \_positionX,\ \textcolor{keywordtype}{int}\ \_positionY,\ \mbox{\hyperlink{_tuile__objectif_8h_a1cba3a9320a88b6d39d1396cc0bc98d5}{TypeCouleur}}\ \_couleur,\ \mbox{\hyperlink{_tuile__objectif_8h_a2e7397bddb25cdb82a925b41a788e72e}{TypeSymbole}});}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//\ Setters}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tuile__objectif_a4d78fcab94b320de4c91d81a043f50c8}{setPosition}}(\textcolor{keywordtype}{int}\ \_positionX,\ \textcolor{keywordtype}{int}\ \_positionY);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tuile__objectif_a18c7cbe62171040b64a4102c03f62d52}{setCouleur}}(\mbox{\hyperlink{_tuile__objectif_8h_a1cba3a9320a88b6d39d1396cc0bc98d5}{TypeCouleur}}\ \_couleur);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tuile__objectif_af5fe7e64563a6ded47261b9f00111704}{setSymbole}}(\mbox{\hyperlink{_tuile__objectif_8h_a2e7397bddb25cdb82a925b41a788e72e}{TypeSymbole}}\ \_symbole);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//\ Getters}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tuile__objectif_ac09204b3e1671ed25b4a08590e6d217b}{getPosition}}(\textcolor{keywordtype}{int}\ *\_positionX,\ \textcolor{keywordtype}{int}\ *\_positionY)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{_tuile__objectif_8h_a2e7397bddb25cdb82a925b41a788e72e}{TypeSymbole}}\ \mbox{\hyperlink{class_tuile__objectif_aac89df2c8ac7bc75e3092ea80a58f452}{getSymbole}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{_tuile__objectif_8h_a1cba3a9320a88b6d39d1396cc0bc98d5}{TypeCouleur}}\ \mbox{\hyperlink{class_tuile__objectif_a43fac45c539b20bd507c19a81f942b90}{getCouleur}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_tuile__objectif_af5729a72418f378f79f23697e74bc3dd}{get\_X}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_tuile__objectif_aa8383b6405f1cc0258b59613e73cb0cb}{get\_Y}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00123\ \};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

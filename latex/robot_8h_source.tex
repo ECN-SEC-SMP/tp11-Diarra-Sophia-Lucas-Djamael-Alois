@@ -1,0 +1,58 @@
+\doxysection{robot.\+h}
+\hypertarget{robot_8h_source}{}\label{robot_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_tuile__objectif_8h}{Tuile\_objectif.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}plateau.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_plateau}{Plateau}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_robot_a4fc7c70ae20623f05e06f2ecb388b6c4}{Robot}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_robot_a32c50e8f8352da3601c34c54f32649fa}{x}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_robot_aa9d4cd428042e1f5dd4723dd383e38d7}{y}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{_tuile__objectif_8h_a1cba3a9320a88b6d39d1396cc0bc98d5}{TypeCouleur}}\ \mbox{\hyperlink{class_robot_a97c58f0052727cab4b4b1c3c11ccffa2}{couleur}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_robot_a8e08ca39b8f114cfa550338868617459}{nombre\_de\_deplacements}};\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_robot_a4fc7c70ae20623f05e06f2ecb388b6c4}{Robot}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_robot_a4fc7c70ae20623f05e06f2ecb388b6c4}{Robot}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_robot_a32c50e8f8352da3601c34c54f32649fa}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_robot_aa9d4cd428042e1f5dd4723dd383e38d7}{y}},\ \mbox{\hyperlink{_tuile__objectif_8h_a1cba3a9320a88b6d39d1396cc0bc98d5}{TypeCouleur}}\ c,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_robot_a8e08ca39b8f114cfa550338868617459}{nombre\_de\_deplacements}}\ =\ 0);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_robot_aae55ebc68d0f807fde08d56a7635c062}{getX}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ const\ dire\ que\ les\ attributs\ ne\ sont\ pas\ modifies}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_robot_a18d302e4d0a269d57a4591b04765e8d0}{getY}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ const\ dire\ que\ les\ attributs\ ne\ sont\ pas\ modifies}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{_tuile__objectif_8h_a1cba3a9320a88b6d39d1396cc0bc98d5}{TypeCouleur}}\ \mbox{\hyperlink{class_robot_a2c45f865bac559398ccb0e283f2e4bdb}{getCouleur}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ const\ dire\ que\ les\ attributs\ ne\ sont\ pas\ modifies}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_robot_a5dcbdab82f958e0db15bb2a6abba27bb}{getCouleurNom}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ const\ dire\ que\ les\ attributs\ ne\ sont\ pas\ modifies}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_robot_a4cde427b8e216c01657300bb06a4b012}{getNombreDeDeplacements}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ const\ dire\ que\ les\ attributs\ ne\ sont\ pas\ modifies}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_robot_a1bbf9b698aa393e133f739d7d1aa52f9}{positionOccupee}}(\textcolor{keywordtype}{int}\ nx,\ \textcolor{keywordtype}{int}\ ny,\ \textcolor{keyword}{const}\ vector<Robot\ *>\ \&robots);\ \textcolor{comment}{//\ verifie\ si\ une\ position\ est\ occupee\ par\ un\ autre\ robot}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_robot_a37142376c3a6972ff0c44bf643b67dcf}{deplacement}}(\textcolor{keywordtype}{string}\ direction,\ \textcolor{keyword}{const}\ vector<Robot\ *>\ \&robots,\ \mbox{\hyperlink{class_plateau}{Plateau}}\ *plateau);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_robot_af34f690edd7ee31e388bcbaf4c26f292}{setX}}(\textcolor{keywordtype}{int}\ \_X);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_robot_a0e9273dfad5a9f9994374a6c1e235587}{setY}}(\textcolor{keywordtype}{int}\ \_Y);}
+\DoxyCodeLine{00105\ \};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00114\ \textcolor{keywordtype}{bool}\ estPositionLibre(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keyword}{const}\ std::vector<Robot>\ \&robots);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00120\ vector<Robot>\ creationRobots();}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00127\ vector<Robot\ *>\ getPointers(vector<Robot>\ \&robots);}
+
+\end{DoxyCode}

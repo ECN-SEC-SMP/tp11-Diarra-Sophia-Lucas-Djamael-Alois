@@ -7,6 +7,12 @@
 #include <ctime>    // pour time()
 #include <utility> // pour pair
 #include <random>    // pour std::default_random_engine
+
+// Constructeur par défaut
+/**
+ * @brief Constructeur par défaut du plateau.
+ * Initialise un plateau vide avec une grille de 32x32 cases.
+ */
 Plateau::Plateau()
 {
     for (int i = 0; i < 32; ++i)
@@ -32,6 +38,10 @@ Plateau::Plateau()
 
 }
 
+/**
+ * @brief Ajoute des murs dans les différents quadrants du plateau.
+ * Cette fonction ajoute des murs à des positions spécifiques du plateau.
+ */
 void Plateau::ajouterMursQuadrants() {
     srand(time(nullptr)); // Pour de l'aléatoire
 
@@ -108,7 +118,12 @@ void Plateau::ajouterMursQuadrants() {
     }
 }
 
-
+/**
+ * @brief Place un mur à une position donnée avec une orientation spécifiée.
+ * @param x La coordonnée x de la position du mur.
+ * @param y La coordonnée y de la position du mur.
+ * @param orientation L'orientation du mur (par exemple, "gauche", "droite", "haut", "bas").
+ */
 void Plateau::placerMur(int x, int y, string orientation) {
     if (orientation == "gauche") {
         if (x == 1 && y > 0 && y < 31 && grille[x][y] == 0) {
@@ -128,7 +143,14 @@ void Plateau::placerMur(int x, int y, string orientation) {
         }
     }
 }
-// Dans Plateau.cpp
+
+/**
+ * @brief Place un angle sur le plateau.
+ * @param row La ligne où placer l'angle.
+ * @param col La colonne où placer l'angle.
+ * @param orientation L'orientation de l'angle (par exemple, "haut-gauche").
+ * @return True si l'angle a été placé avec succès, sinon false.
+ */
 bool Plateau::placerAngle(int row, int col, const string& orientation) {
     int r1 = row,   c1 = col;
     int r2, c2, r3, c3;
@@ -175,6 +197,10 @@ bool Plateau::placerAngle(int row, int col, const string& orientation) {
     return true;
 }
 
+/**
+ * @brief Ajoute des angles dans les différents quadrants du plateau.
+ * Cette fonction ajoute des angles dans les quadrants du plateau.
+ */
 void Plateau::ajouterAnglesQuadrants() {
     // Initialise l’aléatoire une seule fois
     static bool seeded = false;
@@ -215,6 +241,10 @@ void Plateau::ajouterAnglesQuadrants() {
     }
 }
 
+/**
+ * @brief Place un robot sur le plateau.
+ * @param robot Un pointeur vers l'objet robot à placer sur le plateau.
+ */
 void Plateau::placerRobot(Robot* robot) {
     int x = 1 + 2 * robot->getX();
     int y = 1 + 2 * robot->getY();
@@ -261,7 +291,12 @@ void Plateau::placerRobot(Robot* robot) {
         }
     }
 }
+
 // Renvoie le code ANSI pour la couleur du robot / tuile
+/**
+ * @param c La couleur du robot ou de la tuile.
+ * @return Le code ANSI correspondant à la couleur.
+ */
 static const char* ansiCouleur(int c) {
     switch (c) {
         case ROUGE: return "\033[31m";  // rouge
@@ -274,6 +309,10 @@ static const char* ansiCouleur(int c) {
 
 // Donne la lettre de la tuile selon son “dizaine”
 // (10→carré, 20→losange, 30→étoile, 40→rond)
+/**
+ * @param val La valeur de la tuile.
+ * @return La lettre correspondant à la forme de la tuile.
+ */
 static char lettreTuile(int val) {
     switch (val / 10) {
         case 1: return 'C';  // carré
@@ -284,6 +323,10 @@ static char lettreTuile(int val) {
     }
 }
 
+/**
+ * @brief Affiche le plateau de jeu.
+ * Affiche l'état actuel de la grille du plateau dans la console.
+ */
 void Plateau::afficherPlateau() {
     for (int i = 0; i < 32; ++i) {
         for (int j = 0; j < 32; ++j) {
@@ -327,8 +370,11 @@ void Plateau::afficherPlateau() {
     }
 }
 
-
-
+/**
+ * @brief Retourne les coordonnées des cases ayant une valeur spécifiée.
+ * @param valeur La valeur à rechercher sur la grille du plateau.
+ * @return Un vecteur de paires représentant les coordonnées des cases correspondantes.
+ */
 vector<pair<int, int>> Plateau::getCoordonneesCases(int valeur) const {
     vector<pair<int, int>> coordonnees;
 
@@ -343,6 +389,10 @@ vector<pair<int, int>> Plateau::getCoordonneesCases(int valeur) const {
     return coordonnees;
 }
 
+/**
+ * @brief Met à jour l'état du plateau en fonction des positions des robots.
+ * @param robots Un vecteur contenant les robots présents sur le plateau.
+ */
 void Plateau::majPlateau(const std::vector<Robot*>& robots) {
     // 1) Nettoyer les anciennes positions des robots
     for (int i = 0; i < 32; ++i) {
@@ -374,7 +424,10 @@ void Plateau::majPlateau(const std::vector<Robot*>& robots) {
     // }
 }
 
-
+/**
+ * @brief Place les tuiles objectifs sur le plateau.
+ * @param tuilesPlacees Un vecteur de tuiles à placer sur le plateau.
+ */
 void Plateau::placerTuilesObjectif(vector<Tuile_objectif>& tuilesPlacees) {
     // Récupère toutes les positions valides (cases == 3)
     vector<pair<int, int>> emplacements = getCoordonneesCases(3);
@@ -414,6 +467,18 @@ void Plateau::placerTuilesObjectif(vector<Tuile_objectif>& tuilesPlacees) {
         // printTuile(&tuilesPlacees[i]);
     }
 }
+
+/**
+ * @brief Retourne la valeur de la case à une position donnée.
+ * @param i La coordonnée de la ligne.
+ * @param j La coordonnée de la colonne.
+ * @return La valeur de la case à la position (i, j).
+ */
+int Plateau::getGrille(int i, int j) const {
+    return grille[i][j];
+}
+
+
 // void Plateau::afficherPlateau()
 // {
 //     for (int i = 0; i < 32; i++)

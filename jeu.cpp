@@ -7,11 +7,13 @@
 #include <algorithm>
 #include <set>
 #include <map>
+#include "jeu.h"
 
 using namespace std;
 
-#include "jeu.h"
-
+/**
+ * @brief Ajoute des joueurs à la partie en demandant leur nom.
+ */
 void Jeu::set_Joueurs()
 {
 
@@ -40,16 +42,21 @@ void Jeu::set_Joueurs()
         cout << "Joueur " << i + 1 << " : " << joueurs[i].getNom() << endl;
     }
 
-    // commencer la partie
     cout << "\n=== Partie commence ===" << endl;
 }
 
+/**
+ * @brief Constructeur de la classe Jeu qui initialise les robots, le plateau et les joueurs.
+ */
 Jeu::Jeu()
 {
 
     // === Étape 1 : Créer les robots (liste de 4 robots de couleurs différentes)
     this->robots = creationRobots();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 67ac79c63f349f8a4158a705843d27d7b00539cd
     for (auto &robot : this->robots)
     {
         this->le_plateau.placerRobot(&robot);
@@ -58,12 +65,16 @@ Jeu::Jeu()
     // === Étape 2 : Initialisation des positions de tuiles
     le_plateau.placerTuilesObjectif(this->liste_tuiles_objectifs);
 
+<<<<<<< HEAD
     // === Étape 8 : Afficher le plateau et légendes
+=======
+    // === Étape 3 : Afficher le plateau et légendes
+>>>>>>> 67ac79c63f349f8a4158a705843d27d7b00539cd
     std::cout << "\n=== Plateau généré ===\n";
     afficherLegendePlateau();
     le_plateau.afficherPlateau();
 
-    // === Étape 9 : Ajouter les joueurs
+    // === Étape 4 : Ajouter les joueurs
     set_Joueurs();
 }
 
@@ -71,6 +82,9 @@ Jeu::Jeu()
 // tirer une tuile parmi les 17 et le placer au centre
 
 // set tuile objectif_actuel, met a jour la position de cette tuile
+/**
+ * @brief Tire une tuile objectif aléatoire et la place au centre du plateau.
+ */
 void Jeu::tirer_tuile_objectif()
 {
     string nomsymbole, nomcouleur;
@@ -121,14 +135,18 @@ void Jeu::tirer_tuile_objectif()
          << "Positionnée en (" << objectif_actuel.get_X() << "; " << objectif_actuel.get_Y() << ")" << endl;
 };
 
-// demarre la phase de recherche et activation du sablier
+/**
+ * @brief Lance le sablier pour démarrer la phase de recherche.
+ */
 void Jeu::annoncer_Solution()
 {
     // Entrer le nombre de deplacement
     le_sablier.start_timer();
 };
 
-//
+/**
+ * @brief Permet au joueur de déplacer les robots et d'afficher la mise à jour du plateau.
+ */
 void Jeu::proposer_Solution()
 {
     vector<Robot *> robotPtrs;
@@ -171,7 +189,7 @@ void Jeu::proposer_Solution()
         string directionInput;
         getline(cin, directionInput);
 
-        robots[couleurRobot].deplacement(directionInput, robotPtrs);
+        robots[couleurRobot].deplacement(directionInput, robotPtrs, &le_plateau);
         cout << "Robot " << couleurInput << " : (" << robots[couleurRobot].getX() << ", " << robots[couleurRobot].getY() << ")" << endl;
 
         le_plateau.majPlateau(getPointers(robots));
@@ -195,7 +213,11 @@ void Jeu::proposer_Solution()
     cout << "Nombre total de deplacements : " << total_deplacements << endl;
 };
 
-// verifier si la position de la tuile objectif actuel est celle de la case objectif
+/**
+ * @brief Vérifie si la solution d'un joueur est correcte en fonction de la position de la tuile objectif.
+ * @param NomJoueur Nom du joueur qui propose la solution.
+ * @return true si la solution est correcte, false sinon.
+ */
 bool Jeu::valider_solution(string NomJoueur)
 {
     Joueur *joueur_courant;
@@ -238,15 +260,22 @@ bool Jeu::valider_solution(string NomJoueur)
     }
 }
 
+<<<<<<< HEAD
 // Jeu::~Jeu()
 //{
 //  nothing to do here
 //}
 
+=======
+/**
+ * @brief Affiche la légende du plateau.
+ */
+>>>>>>> 67ac79c63f349f8a4158a705843d27d7b00539cd
 void Jeu::afficherLegendePlateau()
 {
     std::cout << "\n=== LÉGENDE ===\n";
-    std::cout << "R = Robot Rouge      V = Vert    B = Bleu     J = Jaune\n";
-    std::cout << "L = Losange          C = Carré   E = Étoile   R = Rond\n";
-    std::cout << "# = Mur              espace = Vide\n\n";
+    std::cout << "R = Robot (la **couleur du caractère R** indique la couleur du robot)\n";
+    std::cout << "L = Losange    C = Carré    E = Étoile    O = Rond\n";
+    std::cout << "   → la **couleur de la lettre** indique la couleur de la **tuile**\n";
+    std::cout << "🧱 = Mur        espace = Vide\n\n";
 }

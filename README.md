@@ -1,6 +1,6 @@
 # TP projet: Ricochet Rebot
 ## Introduction                                      
-Ce projet s'inscrit dans le cadre du module de **spécification et modélisation de programme**. L'objectif principal est d'implémenter le jeu *RICOCHET ROBOT* en utilisant l'ensemble des concepts liés à la programmation orientée objet. Les principlaes compétences visées sont principalement: le développement de l'esprit de travail collectif, faire des choix de conception et mobiliser les aspects du cours théorique dans un cadre pratique.
+Ce projet s'inscrit dans le cadre du module de **spécification et modélisation de programme**. L'objectif principal est d'implémenter le jeu *RICOCHET ROBOT* en utilisant l'ensemble des concepts liés à la programmation orientée objet. Les principales compétences visées sont: le développement de l'esprit de travail collectif, faire des choix de conception et mobiliser les aspects du cours théorique dans un cadre pratique.
 ## Organisation du travail
 Nous sommes cinq personnes à avoir réalisé ce projet: Alois, Diarra, Djamael, Lucas et Sophia. Nous nous sommes répartis le travail en fonction des choix de conception que nous avons fait. La répartition des taches sera mentionnée dans la prochaine partie.
 A travers ce projet, nous avons mobilisé plusieurs outils: des outils de versionning comme **GIT**, **GITHUB**, des outils de conception comme **l'UML**, des outils de travail collaboratif comme **EXCALIDRAW**. Le langage utilisé pour l'implémentatio est le **C++**.
@@ -36,7 +36,8 @@ Nous avons procédé à des tests des différentes méthodes implémentées dans
     ### Exemple de test de la classe Robot
 
     ### Exemple de test de la classe Plateau
-
+Testée avec "main_test.cpp" avec un faux robot "robot_test" avant l'implémentation avec la vraie classe "robot" : ![image](https://github.com/user-attachments/assets/87af2ba3-1150-48c2-866d-a41863b06c95)
+![image](https://github.com/user-attachments/assets/4902649a-b9ce-4a90-82ac-68b919a588be)
 
     ### Exemple de test de la classe Joueur
 
