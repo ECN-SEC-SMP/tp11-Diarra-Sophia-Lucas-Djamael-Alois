@@ -36,7 +36,8 @@ Nous avons procédé à des tests des différentes méthodes implémentées dans
     ### Exemple de test de la classe Robot
 
     ### Exemple de test de la classe Plateau
-
+Testée avec "main_test.cpp" avec un faux robot "robot_test" avant l'implémentation avec la vraie classe "robot" : ![image](https://github.com/user-attachments/assets/87af2ba3-1150-48c2-866d-a41863b06c95)
+![image](https://github.com/user-attachments/assets/4902649a-b9ce-4a90-82ac-68b919a588be)
 
     ### Exemple de test de la classe Joueur
 
