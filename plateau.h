@@ -3,7 +3,11 @@
 
 #include <string>
 #include <vector>
+#include <utility>
 #include "robot.h"
+#include "Tuile_objectif.h"
+
+class Robot;  // Déclaration anticipée (forward declaration)
 
 
 typedef enum
@@ -30,6 +34,7 @@ public:
     vector<pair<int, int>> getCoordonneesCases(int valeur) const ;
     void placerTuilesObjectif(vector<Tuile_objectif>& tuilesPlacees);
     void majPlateau(const std::vector<Robot*>& robots);
+    int getGrille(int i, int j) const;
 };
 
 #endif

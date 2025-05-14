@@ -412,6 +412,13 @@ void Plateau::placerTuilesObjectif(vector<Tuile_objectif>& tuilesPlacees) {
         tuilesPlacees.push_back(toutesTuiles[i]);
     }
 }
+
+//get grille
+int Plateau::getGrille(int i, int j) const {
+    return grille[i][j];
+}
+
+
 // void Plateau::afficherPlateau()
 // {
 //     for (int i = 0; i < 32; i++)

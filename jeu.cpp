@@ -134,7 +134,7 @@ void Jeu::proposer_Solution()
         string directionInput;
         getline(cin, directionInput);
 
-        robots[couleurRobot].deplacement(directionInput, robotPtrs);
+        robots[couleurRobot].deplacement(directionInput, robotPtrs, &le_plateau);
         cout << "Robot " << couleurInput << " : (" << robots[couleurRobot].getX() << ", " << robots[couleurRobot].getY() << ")" << endl;
 
         le_plateau.majPlateau(getPointers(robots));
@@ -208,7 +208,8 @@ bool Jeu::valider_solution(string NomJoueur)
 
 void Jeu::afficherLegendePlateau() {
     std::cout << "\n=== LÉGENDE ===\n";
-    std::cout << "R = Robot Rouge      V = Vert    B = Bleu     J = Jaune\n";
-    std::cout << "L = Losange          C = Carré   E = Étoile   R = Rond\n";
-    std::cout << "# = Mur              espace = Vide\n\n";
+    std::cout << "R = Robot (la **couleur du caractère R** indique la couleur du robot)\n";
+    std::cout << "L = Losange    C = Carré    E = Étoile    R = Rond\n";
+    std::cout << "   → la **couleur de la lettre** indique la couleur de la **tuile**\n";
+    std::cout << "🧱 = Mur        espace = Vide\n\n";
 }
